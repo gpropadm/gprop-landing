@@ -1,0 +1,20 @@
+{
+  "name": "gprop-landing",
+  "version": "1.0.0",
+  "description": "Landing page para G-PROP - Gestão Imobiliária",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -p 3001",
+    "build": "echo 'No build needed for static site'",
+    "start": "npx serve .",
+    "deploy": "vercel deploy --prod"
+  },
+  "keywords": [
+    "imobiliaria",
+    "gestao",
+    "crm",
+    "landing-page"
+  ],
+  "author": "G-PROP",
+  "license": "MIT"
+}
