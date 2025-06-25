@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-PROP - Plataforma IA Avançada</title>
-    <meta name="description" content="Tecnologia de IA que revoluciona o mercado imobiliário. Resultados extraordinários garantidos.">
+    <title>G-PROP - Sistema Imobiliário Avançado</title>
+    <meta name="description" content="Plataforma completa para gestão imobiliária. Mais vendas, mais resultados.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -17,569 +17,194 @@
         }
         
         :root {
-            --neon-purple: #bf00ff;
-            --electric-purple: #8a2be2;
-            --deep-purple: #6a0dad;
-            --cyber-purple: #9d4edd;
-            --glow-purple: #c77dff;
-            --ultra-black: #000000;
-            --void-black: #0a0a0a;
-            --deep-black: #050505;
-            --carbon-black: #111111;
-            --pure-white: #ffffff;
-            --silver: #c0c0c0;
-            --chrome: #e8e8e8;
-            --glass-border: rgba(191, 0, 255, 0.3);
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --border: #334155;
+            --gradient: linear-gradient(135deg, #2563eb, #0ea5e9);
         }
         
         body {
-            font-family: 'Rajdhani', sans-serif;
-            background: var(--ultra-black);
-            color: var(--pure-white);
-            line-height: 1.5;
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
             overflow-x: hidden;
-            position: relative;
-        }
-        
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 10% 20%, rgba(191, 0, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(106, 13, 173, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
         }
         
         .container {
-            max-width: 1600px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Header Ultra Dark */
+        /* Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
-        }
-        
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
-            box-shadow: 0 0 20px var(--neon-purple);
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 0;
+            padding: 1rem 0;
         }
         
         .logo {
-            font-family: 'Orbitron', monospace;
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--pure-white);
-            text-shadow: 
-                0 0 10px var(--neon-purple),
-                0 0 20px var(--neon-purple),
-                0 0 30px var(--neon-purple);
-            letter-spacing: 3px;
-            position: relative;
-        }
-        
-        .logo::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--neon-purple), var(--electric-purple));
-            box-shadow: 0 0 15px var(--neon-purple);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
         }
         
         .nav-links {
             display: flex;
-            gap: 50px;
+            gap: 2rem;
             list-style: none;
         }
         
         .nav-links a {
-            color: var(--silver);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, transparent, rgba(191, 0, 255, 0.1), transparent);
-            border-radius: 8px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .nav-links a:hover::before {
-            opacity: 1;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: var(--pure-white);
-            text-shadow: 0 0 15px var(--neon-purple);
+            color: var(--text-primary);
         }
         
         .nav-cta {
-            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
-            color: var(--pure-white);
-            padding: 15px 30px;
-            border-radius: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 
-                0 0 20px rgba(191, 0, 255, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .nav-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .nav-cta:hover::before {
-            left: 100%;
+            font-weight: 600;
+            transition: transform 0.3s ease;
         }
         
         .nav-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 
-                0 0 30px rgba(191, 0, 255, 0.8),
-                0 10px 30px rgba(191, 0, 255, 0.3);
+            transform: translateY(-2px);
         }
         
-        /* Hero Ultra Dark com Reflexos */
+        /* Hero */
         .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-        
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 30% 30%, rgba(191, 0, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
-                var(--ultra-black);
-        }
-        
-        .hero-grid {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(191, 0, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(191, 0, 255, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.3;
-            animation: gridPulse 4s ease-in-out infinite alternate;
-        }
-        
-        @keyframes gridPulse {
-            0% { opacity: 0.2; }
-            100% { opacity: 0.4; }
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
+            padding: 8rem 0 4rem;
             text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid var(--glass-border);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(20px);
-            box-shadow: 
-                0 0 30px rgba(191, 0, 255, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(191, 0, 255, 0.3), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
         }
         
         .hero-title {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(4rem, 10vw, 8rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 900;
-            line-height: 1;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, 
-                var(--pure-white) 0%, 
-                var(--glow-purple) 30%, 
-                var(--neon-purple) 60%, 
-                var(--pure-white) 100%);
+            margin-bottom: 1.5rem;
+            background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 
-                0 0 50px rgba(191, 0, 255, 0.8),
-                0 0 100px rgba(191, 0, 255, 0.4);
-            letter-spacing: 3px;
-            position: relative;
-        }
-        
-        .hero-title::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent, rgba(191, 0, 255, 0.1), transparent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            z-index: -1;
-            transform: translateY(5px);
-            filter: blur(2px);
-            opacity: 0.5;
         }
         
         .hero-subtitle {
-            font-size: 1.8rem;
-            color: var(--chrome);
-            margin-bottom: 4rem;
-            font-weight: 400;
-            max-width: 900px;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            text-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
-            line-height: 1.4;
         }
         
         .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 20px;
-            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple), var(--deep-purple));
-            color: var(--pure-white);
-            padding: 25px 50px;
-            border-radius: 15px;
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.3rem;
-            transition: all 0.4s ease;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 
-                0 0 40px rgba(191, 0, 255, 0.6),
-                0 20px 40px rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 5rem;
-        }
-        
-        .hero-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .hero-cta:hover::before {
-            left: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            margin-bottom: 3rem;
         }
         
         .hero-cta:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 
-                0 0 60px rgba(191, 0, 255, 1),
-                0 30px 60px rgba(0, 0, 0, 0.7);
+            transform: translateY(-3px);
         }
         
         .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 100px;
-            margin-top: 5rem;
+            gap: 4rem;
+            margin-top: 2rem;
         }
         
-        .stat-card {
+        .stat {
             text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            border: 1px solid var(--glass-border);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(20px);
-            box-shadow: 
-                0 0 30px rgba(191, 0, 255, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--neon-purple), var(--electric-purple));
-            box-shadow: 0 0 20px var(--neon-purple);
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 
-                0 0 50px rgba(191, 0, 255, 0.4),
-                0 20px 40px rgba(0, 0, 0, 0.6);
         }
         
         .stat-number {
-            font-family: 'Orbitron', monospace;
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: var(--pure-white);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
             display: block;
-            text-shadow: 
-                0 0 20px var(--neon-purple),
-                0 0 40px var(--neon-purple);
-            margin-bottom: 10px;
         }
         
         .stat-label {
-            font-size: 1.1rem;
-            color: var(--chrome);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
         
-        /* Features Ultra Dark */
+        /* Features */
         .features {
-            padding: 150px 0;
-            background: var(--void-black);
-            position: relative;
-        }
-        
-        .features::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
-            box-shadow: 0 0 30px var(--neon-purple);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 100px;
-        }
-        
-        .section-badge {
-            display: inline-block;
-            background: rgba(0, 0, 0, 0.9);
-            border: 2px solid var(--glass-border);
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            color: var(--glow-purple);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 
-                0 0 25px rgba(191, 0, 255, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            padding: 4rem 0;
         }
         
         .section-title {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 900;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--pure-white), var(--glow-purple), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 50px rgba(191, 0, 255, 0.5);
-            letter-spacing: 2px;
-        }
-        
-        .section-subtitle {
-            font-size: 1.4rem;
-            color: var(--chrome);
-            max-width: 700px;
-            margin: 0 auto;
-            font-weight: 400;
-            text-shadow: 0 0 15px rgba(191, 0, 255, 0.2);
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
         
         .feature-card {
-            background: rgba(0, 0, 0, 0.9);
-            border: 1px solid var(--glass-border);
-            padding: 50px;
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(20px);
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--neon-purple), var(--electric-purple), var(--deep-purple));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            box-shadow: 0 0 20px var(--neon-purple);
-        }
-        
-        .feature-card::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(180deg, transparent, rgba(191, 0, 255, 0.1));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .feature-card:hover::after {
-            opacity: 1;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--neon-purple);
-            box-shadow: 
-                0 0 50px rgba(191, 0, 255, 0.3),
-                0 30px 60px rgba(0, 0, 0, 0.7);
-        }
-        
-        .feature-number {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.2rem;
-            color: var(--neon-purple);
-            font-weight: 700;
-            margin-bottom: 25px;
-            text-shadow: 0 0 15px var(--neon-purple);
-            letter-spacing: 2px;
+            transform: translateY(-5px);
         }
         
         .feature-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--pure-white);
-            text-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
-            letter-spacing: 1px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
         
         .feature-desc {
-            color: var(--chrome);
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-weight: 400;
-            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
         }
         
         .feature-list {
@@ -589,464 +214,237 @@
         .feature-list li {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            color: var(--silver);
-            font-weight: 500;
-            font-size: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
         }
         
         .feature-list li::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--neon-purple);
-            border-radius: 50%;
-            box-shadow: 
-                0 0 15px var(--neon-purple),
-                0 0 30px var(--neon-purple);
-            animation: pulse 2s infinite;
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
         }
         
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.2); }
-        }
-        
-        /* Pricing Ultra Premium */
+        /* Pricing */
         .pricing {
-            padding: 150px 0;
-            background: var(--deep-black);
-            position: relative;
-        }
-        
-        .pricing::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
-            box-shadow: 0 0 30px var(--neon-purple);
+            padding: 4rem 0;
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin-top: 80px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
         
         .pricing-card {
-            background: rgba(0, 0, 0, 0.95);
-            border: 2px solid var(--glass-border);
-            padding: 50px;
-            border-radius: 25px;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
             text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(20px);
-        }
-        
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple), var(--deep-purple));
-            border-radius: 25px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        
-        .pricing-card::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: radial-gradient(circle, rgba(191, 0, 255, 0.2) 0%, transparent 70%);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.4s ease;
-        }
-        
-        .pricing-card:hover::before {
-            opacity: 1;
-        }
-        
-        .pricing-card:hover::after {
-            width: 200%;
-            height: 200%;
+            transition: transform 0.3s ease;
         }
         
         .pricing-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 
-                0 0 60px rgba(191, 0, 255, 0.4),
-                0 40px 80px rgba(0, 0, 0, 0.8);
+            transform: translateY(-5px);
         }
         
         .pricing-card.featured {
-            border-color: var(--neon-purple);
-            box-shadow: 0 0 40px rgba(191, 0, 255, 0.4);
+            border-color: var(--primary);
+            position: relative;
         }
         
         .plan-badge {
+            background: var(--gradient);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
             position: absolute;
-            top: -15px;
+            top: -0.5rem;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
-            color: var(--pure-white);
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            font-family: 'Orbitron', monospace;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 25px rgba(191, 0, 255, 0.6);
         }
         
         .plan-name {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--pure-white);
-            text-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
-            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
         
         .plan-price {
-            font-family: 'Orbitron', monospace;
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 900;
-            margin-bottom: 10px;
-            color: var(--pure-white);
-            text-shadow: 
-                0 0 30px var(--neon-purple),
-                0 0 60px var(--neon-purple);
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
         }
         
         .plan-period {
-            color: var(--chrome);
-            margin-bottom: 40px;
-            font-weight: 500;
-            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
         }
         
         .plan-features {
             list-style: none;
-            margin-bottom: 40px;
+            margin-bottom: 2rem;
             text-align: left;
         }
         
         .plan-features li {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 18px;
-            color: var(--silver);
-            font-weight: 500;
-            font-size: 1.1rem;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
         }
         
         .plan-features li::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--neon-purple);
-            border-radius: 50%;
-            box-shadow: 
-                0 0 15px var(--neon-purple),
-                0 0 30px var(--neon-purple);
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
         }
         
         .plan-button {
-            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
-            color: var(--pure-white);
-            padding: 20px 40px;
+            background: var(--gradient);
+            color: white;
+            padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
             text-decoration: none;
             display: inline-block;
-            transition: all 0.4s ease;
             width: 100%;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 
-                0 0 30px rgba(191, 0, 255, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .plan-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .plan-button:hover::before {
-            left: 100%;
+            transition: transform 0.3s ease;
         }
         
         .plan-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 
-                0 0 50px rgba(191, 0, 255, 0.8),
-                0 15px 40px rgba(0, 0, 0, 0.6);
+            transform: translateY(-2px);
         }
         
-        /* CTA Ultra Dark */
+        /* CTA */
         .cta {
-            padding: 150px 0;
-            background: var(--carbon-black);
+            padding: 4rem 0;
             text-align: center;
-            position: relative;
-        }
-        
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
-            box-shadow: 0 0 30px var(--neon-purple);
-        }
-        
-        .cta-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
         }
         
         .cta-title {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 900;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, var(--pure-white), var(--glow-purple), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 60px rgba(191, 0, 255, 0.6);
-            letter-spacing: 2px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
         
         .cta-subtitle {
-            font-size: 1.4rem;
-            color: var(--chrome);
-            margin-bottom: 50px;
-            font-weight: 400;
-            line-height: 1.5;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
         }
         
         .cta-buttons {
             display: flex;
-            gap: 30px;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
         
         .cta-button {
-            padding: 25px 50px;
-            border-radius: 15px;
-            font-weight: 700;
-            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
             text-decoration: none;
-            transition: all 0.4s ease;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            overflow: hidden;
+            transition: transform 0.3s ease;
         }
         
         .cta-button.primary {
-            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
-            color: var(--pure-white);
-            box-shadow: 
-                0 0 40px rgba(191, 0, 255, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            background: var(--gradient);
+            color: white;
         }
         
         .cta-button.secondary {
             background: transparent;
-            color: var(--pure-white);
-            border: 3px solid var(--neon-purple);
-            box-shadow: 0 0 30px rgba(191, 0, 255, 0.3);
-        }
-        
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .cta-button:hover::before {
-            left: 100%;
+            color: var(--text-primary);
+            border: 2px solid var(--primary);
         }
         
         .cta-button:hover {
-            transform: translateY(-5px) scale(1.02);
+            transform: translateY(-3px);
         }
         
-        .cta-button.primary:hover {
-            box-shadow: 
-                0 0 60px rgba(191, 0, 255, 0.8),
-                0 25px 50px rgba(0, 0, 0, 0.7);
-        }
-        
-        .cta-button.secondary:hover {
-            background: var(--neon-purple);
-            box-shadow: 
-                0 0 50px rgba(191, 0, 255, 0.6),
-                0 20px 40px rgba(0, 0, 0, 0.6);
-        }
-        
-        /* Footer Ultra Dark */
+        /* Footer */
         footer {
-            background: var(--ultra-black);
-            padding: 100px 0 50px;
-            border-top: 2px solid var(--glass-border);
-            position: relative;
-        }
-        
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
-            box-shadow: 0 0 30px var(--neon-purple);
+            background: var(--card-bg);
+            padding: 3rem 0 2rem;
+            border-top: 1px solid var(--border);
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
         
         .footer-section h3 {
-            font-family: 'Orbitron', monospace;
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            color: var(--pure-white);
-            text-shadow: 0 0 15px rgba(191, 0, 255, 0.3);
-            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
         
         .footer-section p, .footer-section a {
-            color: var(--silver);
+            color: var(--text-secondary);
             text-decoration: none;
-            margin-bottom: 12px;
+            margin-bottom: 0.5rem;
             display: block;
-            font-weight: 400;
-            font-size: 1rem;
-            transition: all 0.3s ease;
         }
         
         .footer-section a:hover {
-            color: var(--pure-white);
-            text-shadow: 0 0 10px rgba(191, 0, 255, 0.5);
-            transform: translateX(5px);
+            color: var(--text-primary);
         }
         
         .footer-bottom {
-            border-top: 1px solid var(--glass-border);
-            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
             text-align: center;
-            color: var(--silver);
-            font-weight: 400;
+            color: var(--text-secondary);
         }
         
         /* Floating Buttons */
         .floating-buttons {
             position: fixed;
-            bottom: 40px;
-            right: 40px;
+            bottom: 2rem;
+            right: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 1rem;
             z-index: 1000;
         }
         
         .floating-btn {
-            width: 70px;
-            height: 70px;
+            width: 3.5rem;
+            height: 3.5rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: var(--pure-white);
-            font-size: 1.8rem;
-            transition: all 0.4s ease;
-            border: 2px solid var(--neon-purple);
-            box-shadow: 
-                0 0 30px rgba(191, 0, 255, 0.4),
-                0 10px 30px rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .floating-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            border-radius: 50%;
-            transform: scale(0);
+            color: white;
+            font-size: 1.25rem;
             transition: transform 0.3s ease;
         }
         
-        .floating-btn:hover::before {
-            transform: scale(1);
-        }
-        
         .floating-btn:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 
-                0 0 50px rgba(191, 0, 255, 0.8),
-                0 20px 40px rgba(0, 0, 0, 0.7);
+            transform: translateY(-3px);
         }
         
         .whatsapp-btn {
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            border-color: #25d366;
+            background: #25d366;
         }
         
         .chat-btn {
-            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
+            background: var(--primary);
         }
         
         /* Responsive */
@@ -1057,7 +455,7 @@
             
             .hero-stats {
                 flex-direction: column;
-                gap: 40px;
+                gap: 2rem;
             }
             
             .features-grid {
@@ -1074,11 +472,11 @@
             }
         }
         
-        /* Scroll Animations */
+        /* Animations */
         .scroll-animate {
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
         }
         
         .scroll-animate.visible {
@@ -1094,246 +492,212 @@
             <nav>
                 <div class="logo">G-PROP</div>
                 <ul class="nav-links">
-                    <li><a href="#recursos">TECNOLOGIA</a></li>
-                    <li><a href="#planos">PLANOS</a></li>
-                    <li><a href="#contato">CONTATO</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
-                <a href="https://app.gprop.com.br" class="nav-cta">ENTRAR</a>
+                <a href="https://app.gprop.com.br" class="nav-cta">Entrar</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section Ultra Dark -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-grid"></div>
-        
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    TECNOLOGIA IA AVANÇADA • RESULTADOS EXTRAORDINÁRIOS
+            <h1 class="hero-title">Sistema Completo para Imobiliárias</h1>
+            <p class="hero-subtitle">
+                Gerencie leads, contratos e vendas em uma plataforma integrada. 
+                Mais organização, mais resultados.
+            </p>
+            <a href="#planos" class="hero-cta">Começar Agora</a>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Imobiliárias</span>
                 </div>
-                <h1 class="hero-title" data-text="REVOLUÇÃO IMOBILIÁRIA">
-                    REVOLUÇÃO<br>
-                    IMOBILIÁRIA
-                </h1>
-                <p class="hero-subtitle">
-                    Plataforma de inteligência artificial mais avançada do Brasil para o mercado imobiliário. 
-                    Transforme dados em vendas, leads em lucros extraordinários.
-                </p>
-                <a href="#planos" class="hero-cta">
-                    INICIAR DOMÍNIO
-                </a>
-                
-                <div class="hero-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">1000+</span>
-                        <span class="stat-label">Imobiliárias Elite</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">500%</span>
-                        <span class="stat-label">ROI Garantido</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">100K+</span>
-                        <span class="stat-label">Vendas Fechadas</span>
-                    </div>
+                <div class="stat">
+                    <span class="stat-number">50k+</span>
+                    <span class="stat-label">Contratos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfação</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Ultra Tech -->
+    <!-- Features -->
     <section class="features" id="recursos">
         <div class="container">
-            <div class="section-header scroll-animate">
-                <div class="section-badge">TECNOLOGIA SUPREMA</div>
-                <h2 class="section-title">ARSENAL IA</h2>
-                <p class="section-subtitle">
-                    Ferramentas de inteligência artificial que dominam o mercado imobiliário
-                </p>
-            </div>
+            <h2 class="section-title scroll-animate">Recursos Principais</h2>
             
             <div class="features-grid">
                 <div class="feature-card scroll-animate">
-                    <div class="feature-number">// 01</div>
-                    <h3 class="feature-title">NEURAL CONVERSION</h3>
+                    <h3 class="feature-title">Gestão de Leads</h3>
                     <p class="feature-desc">
-                        Rede neural proprietária que analisa comportamento de leads em tempo real, 
-                        prevê intenções de compra e otimiza conversões automaticamente.
+                        Capture, organize e acompanhe todos seus leads em um só lugar. 
+                        Nunca mais perca uma oportunidade.
                     </p>
                     <ul class="feature-list">
-                        <li>Machine Learning preditivo avançado</li>
-                        <li>Análise comportamental em tempo real</li>
-                        <li>Otimização automática de campanhas</li>
-                        <li>ROI 500% superior ao mercado</li>
-                        <li>Previsão de vendas com 95% precisão</li>
+                        <li>Captação automática</li>
+                        <li>Qualificação inteligente</li>
+                        <li>Follow-up automatizado</li>
+                        <li>Relatórios detalhados</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card scroll-animate">
-                    <div class="feature-number">// 02</div>
-                    <h3 class="feature-title">QUANTUM AUTOMATION</h3>
+                    <h3 class="feature-title">Contratos Digitais</h3>
                     <p class="feature-desc">
-                        Sistema de automação quântica que processa milhares de interações 
-                        simultâneas, qualifica leads e fecha vendas 24/7.
+                        Crie, envie e assine contratos digitalmente. 
+                        Processo 100% online e seguro.
                     </p>
                     <ul class="feature-list">
-                        <li>Processamento quântico de dados</li>
-                        <li>Qualificação instantânea de leads</li>
-                        <li>Fechamento automatizado de vendas</li>
-                        <li>Integração total com ecossistema</li>
-                        <li>Workflows inteligentes adaptativos</li>
+                        <li>Templates prontos</li>
+                        <li>Assinatura digital</li>
+                        <li>Armazenamento seguro</li>
+                        <li>Integração jurídica</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card scroll-animate">
-                    <div class="feature-number">// 03</div>
-                    <h3 class="feature-title">CYBER ANALYTICS</h3>
+                    <h3 class="feature-title">Relatórios & Analytics</h3>
                     <p class="feature-desc">
-                        Dashboard cyberpunk com métricas em tempo real, análise preditiva 
-                        e insights estratégicos que revelam oportunidades ocultas.
+                        Acompanhe performance, vendas e resultados com 
+                        dashboards intuitivos e relatórios completos.
                     </p>
                     <ul class="feature-list">
-                        <li>Interface holográfica avançada</li>
-                        <li>Métricas multidimensionais</li>
-                        <li>Previsões de mercado com IA</li>
-                        <li>Alertas inteligentes personalizados</li>
-                        <li>Análise competitiva automatizada</li>
+                        <li>Dashboard em tempo real</li>
+                        <li>Métricas de vendas</li>
+                        <li>Análise de performance</li>
+                        <li>Exportação de dados</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Ultra Premium -->
+    <!-- Pricing -->
     <section class="pricing" id="planos">
         <div class="container">
-            <div class="section-header scroll-animate">
-                <div class="section-badge">PLANOS SUPREMOS</div>
-                <h2 class="section-title">ESCOLHA SEU PODER</h2>
-                <p class="section-subtitle">
-                    Soluções premium para imobiliárias que querem dominar o mercado
-                </p>
-            </div>
+            <h2 class="section-title scroll-animate">Planos & Preços</h2>
             
             <div class="pricing-grid">
                 <div class="pricing-card scroll-animate">
-                    <h3 class="plan-name">NEURAL</h3>
-                    <div class="plan-price">299</div>
+                    <h3 class="plan-name">Starter</h3>
+                    <div class="plan-price">R$ 149</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Até 100 contratos premium</li>
-                        <li>IA Neural básica integrada</li>
-                        <li>Dashboard cyberpunk essencial</li>
-                        <li>Automação quântica limitada</li>
-                        <li>Suporte técnico especializado</li>
-                        <li>3 usuários simultâneos</li>
+                        <li>Até 50 contratos</li>
+                        <li>Gestão básica de leads</li>
+                        <li>Relatórios essenciais</li>
+                        <li>Suporte por email</li>
+                        <li>1 usuário</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero dominar com o plano NEURAL!" class="plan-button">
-                        ATIVAR PODER
+                    <a href="https://wa.me/5511999999999?text=Quero o plano Starter!" class="plan-button">
+                        Escolher Plano
                     </a>
                 </div>
                 
                 <div class="pricing-card featured scroll-animate">
-                    <div class="plan-badge">SUPREMO</div>
-                    <h3 class="plan-name">QUANTUM</h3>
-                    <div class="plan-price">599</div>
+                    <div class="plan-badge">Mais Popular</div>
+                    <h3 class="plan-name">Professional</h3>
+                    <div class="plan-price">R$ 299</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Até 500 contratos elite</li>
-                        <li>IA Quantum completa + Analytics</li>
-                        <li>Automação total cyberpunk</li>
-                        <li>Previsões com 95% precisão</li>
-                        <li>Suporte prioritário 24/7/365</li>
-                        <li>10 usuários simultâneos</li>
+                        <li>Até 200 contratos</li>
+                        <li>Gestão completa de leads</li>
+                        <li>Contratos digitais</li>
+                        <li>Relatórios avançados</li>
+                        <li>5 usuários</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero revolucionar com QUANTUM!" class="plan-button">
-                        ATIVAR PODER
+                    <a href="https://wa.me/5511999999999?text=Quero o plano Professional!" class="plan-button">
+                        Escolher Plano
                     </a>
                 </div>
                 
                 <div class="pricing-card scroll-animate">
-                    <h3 class="plan-name">CYBER</h3>
-                    <div class="plan-price">999</div>
+                    <h3 class="plan-name">Enterprise</h3>
+                    <div class="plan-price">R$ 599</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Contratos ilimitados premium</li>
-                        <li>IA personalizada exclusiva</li>
-                        <li>API dedicada + customizações</li>
-                        <li>Gerente de sucesso dedicado</li>
-                        <li>White-label supremo disponível</li>
+                        <li>Contratos ilimitados</li>
+                        <li>Todos os recursos</li>
+                        <li>API personalizada</li>
+                        <li>Suporte prioritário</li>
                         <li>Usuários ilimitados</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero dominar com CYBER supremo!" class="plan-button">
-                        ATIVAR PODER
+                    <a href="https://wa.me/5511999999999?text=Quero o plano Enterprise!" class="plan-button">
+                        Escolher Plano
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Ultra Power -->
+    <!-- CTA -->
     <section class="cta" id="contato">
         <div class="container">
-            <div class="cta-content scroll-animate">
-                <h2 class="cta-title">PRONTO PARA DOMINAR?</h2>
+            <div class="scroll-animate">
+                <h2 class="cta-title">Pronto para Começar?</h2>
                 <p class="cta-subtitle">
-                    Junte-se à elite das imobiliárias que já revolucionaram o mercado 
-                    com tecnologia suprema e resultados extraordinários.
+                    Transforme sua imobiliária com o G-PROP. 
+                    Teste grátis por 14 dias.
                 </p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/5511999999999?text=Quero uma demonstração SUPREMA do G-PROP!" class="cta-button primary">
-                        DEMONSTRAÇÃO SUPREMA
+                    <a href="https://wa.me/5511999999999?text=Quero testar o G-PROP!" class="cta-button primary">
+                        Falar no WhatsApp
                     </a>
                     <a href="https://app.gprop.com.br" class="cta-button secondary">
-                        ACESSO IMEDIATO
+                        Testar Grátis
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Ultra -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>G-PROP SUPREME</h3>
-                    <p>A plataforma de IA mais avançada do Brasil está revolucionando o mercado imobiliário. Tecnologia suprema para resultados extraordinários.</p>
+                    <h3>G-PROP</h3>
+                    <p>Sistema completo para gestão imobiliária. Simplifique seus processos e aumente suas vendas.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>TECNOLOGIA</h3>
-                    <a href="#recursos">Arsenal IA</a>
-                    <a href="#planos">Planos Supremos</a>
-                    <a href="https://app.gprop.com.br">Plataforma Neural</a>
+                    <h3>Produto</h3>
+                    <a href="#recursos">Recursos</a>
+                    <a href="#planos">Planos</a>
+                    <a href="https://app.gprop.com.br">Acessar Sistema</a>
                 </div>
                 <div class="footer-section">
-                    <h3>SUPORTE ELITE</h3>
-                    <a href="https://wa.me/5511999999999">WhatsApp Direto</a>
-                    <a href="mailto:suporte@gprop.com.br">Suporte Supremo</a>
-                    <a href="#">Base de Conhecimento</a>
+                    <h3>Suporte</h3>
+                    <a href="https://wa.me/5511999999999">WhatsApp</a>
+                    <a href="mailto:suporte@gprop.com.br">Email</a>
+                    <a href="#">Central de Ajuda</a>
                 </div>
                 <div class="footer-section">
-                    <h3>CORPORAÇÃO</h3>
-                    <a href="#">Sobre G-PROP</a>
-                    <a href="#">Cases Supremos</a>
-                    <a href="#">Parceiros Elite</a>
+                    <h3>Empresa</h3>
+                    <a href="#">Sobre</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contato</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 G-PROP SUPREME. Todos os direitos reservados. Tecnologia que domina mercados.</p>
+                <p>&copy; 2025 G-PROP. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Buttons Ultra -->
+    <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/5511999999999?text=Quero revolucionar minha imobiliária com G-PROP SUPREME!" class="floating-btn whatsapp-btn" title="WhatsApp Supremo">
+        <a href="https://wa.me/5511999999999?text=Olá! Quero conhecer o G-PROP" class="floating-btn whatsapp-btn" title="WhatsApp">
             💬
         </a>
-        <a href="#" class="floating-btn chat-btn" title="Chat Neural" onclick="alert('Chat neural disponível em breve!')">
-            🧠
+        <a href="#" class="floating-btn chat-btn" title="Chat" onclick="alert('Chat disponível em breve!')">
+            💬
         </a>
     </div>
 
@@ -1374,22 +738,10 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.98)';
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
             } else {
-                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.background = 'rgba(15, 23, 42, 0.9)';
             }
-        });
-
-        // Cyber effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add cyber glitch effect to title
-            const title = document.querySelector('.hero-title');
-            setInterval(() => {
-                title.style.textShadow = `
-                    0 0 50px rgba(191, 0, 255, ${Math.random() * 0.5 + 0.5}),
-                    0 0 100px rgba(191, 0, 255, ${Math.random() * 0.3 + 0.2})
-                `;
-            }, 2000);
         });
     </script>
 </body>
