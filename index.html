@@ -205,6 +205,24 @@
             font-size: 80px;
             opacity: 0.9;
         }
+
+        /* Hero Slider Integration */
+        .hero-slider {
+            position: relative;
+            margin-top: -50px;
+            z-index: 10;
+        }
+
+        .hero-slider .slider-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-slider .slide {
+            min-height: 300px;
+            padding: 60px;
+        }
         
         .stats-row {
             display: flex;
@@ -919,14 +937,9 @@
         </div>
     </section>
 
-    <!-- Modern Slider Section -->
-    <section class="slider-section">
+    <!-- Modern Hero Slider Section -->
+    <section class="hero-slider">
         <div class="container">
-            <div class="section-header fade-in">
-                <h2>Transforme Sua Imobiliária Hoje</h2>
-                <p>Descubra como nossa plataforma pode revolucionar seus resultados</p>
-            </div>
-            
             <div class="slider-container">
                 <div class="slider-wrapper">
                     <div class="slider-track" id="sliderTrack">
