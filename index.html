@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-PROP - Revolução na Gestão Imobiliária</title>
-    <meta name="description" content="Transforme sua imobiliária com IA avançada. Mais leads, mais vendas, mais lucro!">
+    <title>G-PROP - O Futuro da Gestão Imobiliária</title>
+    <meta name="description" content="Plataforma de IA que transforma imobiliárias. Mais leads, mais vendas, mais lucro.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -17,251 +17,294 @@
         }
         
         :root {
-            --primary: #6366f1;
-            --secondary: #8b5cf6;
-            --accent: #06b6d4;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --dark: #0f172a;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
-            --gray-400: #94a3b8;
-            --gray-500: #64748b;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --gray-800: #1e293b;
-            --gray-900: #0f172a;
+            --primary-purple: #8b5cf6;
+            --dark-purple: #7c3aed;
+            --light-purple: #a78bfa;
+            --neon-purple: #c084fc;
+            --accent-purple: #ddd6fe;
+            --black: #000000;
+            --dark-gray: #111111;
+            --medium-gray: #1a1a1a;
+            --light-gray: #2a2a2a;
+            --white: #ffffff;
+            --gray-text: #a1a1aa;
+            --border-gray: #27272a;
         }
         
         body {
             font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
             line-height: 1.6;
-            color: var(--gray-800);
             overflow-x: hidden;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Header Flutuante */
+        /* Header */
         header {
             position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(20px);
-            border-radius: 50px;
-            padding: 15px 30px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid var(--border-gray);
             transition: all 0.3s ease;
         }
         
         nav {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 40px;
+            padding: 20px 0;
         }
         
         .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--white);
+            text-shadow: 0 0 20px var(--primary-purple);
         }
         
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 40px;
             list-style: none;
         }
         
         .nav-links a {
+            color: var(--gray-text);
             text-decoration: none;
-            color: var(--gray-700);
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
         }
         
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--white);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-purple);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
         
         .nav-cta {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
         }
         
         .nav-cta:hover {
             transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
         }
         
-        /* Hero Section Revolucionária */
+        /* Hero Section com Slider */
         .hero {
-            min-height: 100vh;
+            position: relative;
+            height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
             overflow: hidden;
         }
         
-        .hero::before {
-            content: '';
+        .hero-slider {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 70%);
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide-1 {
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.2) 0%, transparent 50%),
+                var(--black);
+        }
+        
+        .slide-2 {
+            background: 
+                radial-gradient(circle at 60% 30%, rgba(167, 139, 250, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 40% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                var(--black);
+        }
+        
+        .slide-3 {
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(192, 132, 252, 0.2) 0%, transparent 50%),
+                var(--black);
         }
         
         .hero-content {
             position: relative;
-            z-index: 2;
-            color: white;
+            z-index: 10;
             text-align: center;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            padding: 10px 20px;
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 8px 20px;
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 500;
             margin-bottom: 2rem;
-            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
         }
         
         .hero-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 700;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff, #f0f9ff);
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-purple) 50%, var(--neon-purple) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
         }
         
         .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            font-weight: 400;
+            font-size: 1.4rem;
+            color: var(--gray-text);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero-cta {
             display: inline-flex;
             align-items: center;
             gap: 15px;
-            background: linear-gradient(135deg, var(--success), var(--accent));
-            color: white;
-            padding: 18px 40px;
-            border-radius: 50px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            color: var(--white);
+            padding: 20px 40px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
             transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
             margin-bottom: 3rem;
         }
         
         .hero-cta:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.6);
+            box-shadow: 0 0 50px rgba(139, 92, 246, 0.8);
         }
         
-        .hero-stats {
+        .hero-metrics {
             display: flex;
             justify-content: center;
-            gap: 60px;
-            margin-top: 3rem;
+            gap: 80px;
+            margin-top: 4rem;
         }
         
-        .stat-item {
+        .metric {
             text-align: center;
         }
         
-        .stat-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
+        .metric-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3rem;
             font-weight: 700;
+            color: var(--white);
             display: block;
+            text-shadow: 0 0 20px var(--primary-purple);
         }
         
-        .stat-label {
+        .metric-label {
             font-size: 0.9rem;
-            opacity: 0.8;
-            font-weight: 500;
+            color: var(--gray-text);
+            font-weight: 400;
         }
         
-        /* Floating Elements */
-        .floating-element {
+        /* Slide Indicators */
+        .slide-indicators {
             position: absolute;
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            animation: float 6s ease-in-out infinite;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
         }
         
-        .floating-1 {
-            top: 10%;
-            left: 10%;
-            width: 60px;
-            height: 60px;
-            animation-delay: 0s;
-        }
-        
-        .floating-2 {
-            top: 20%;
-            right: 10%;
-            width: 80px;
-            height: 80px;
-            animation-delay: 2s;
-        }
-        
-        .floating-3 {
-            bottom: 20%;
-            left: 15%;
+        .indicator {
             width: 40px;
-            height: 40px;
-            animation-delay: 4s;
+            height: 4px;
+            background: rgba(139, 92, 246, 0.3);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        .indicator.active {
+            background: var(--primary-purple);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.8);
         }
         
         /* Features Section */
         .features {
-            padding: 100px 0;
-            background: var(--gray-50);
+            padding: 120px 0;
+            background: var(--dark-gray);
+            position: relative;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
         }
         
         .section-header {
@@ -271,85 +314,92 @@
         
         .section-badge {
             display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
             padding: 8px 20px;
             border-radius: 25px;
             font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--light-purple);
         }
         
         .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--white), var(--light-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .section-subtitle {
             font-size: 1.2rem;
-            color: var(--gray-600);
+            color: var(--gray-text);
             max-width: 600px;
             margin: 0 auto;
+            font-weight: 300;
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 40px;
         }
         
         .feature-card {
-            background: white;
+            background: var(--medium-gray);
+            border: 1px solid var(--border-gray);
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 16px;
             transition: all 0.3s ease;
-            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-purple), var(--dark-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            border-color: var(--primary-purple);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
         }
         
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
+        .feature-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--primary-purple);
+            font-weight: 600;
             margin-bottom: 20px;
-        }
-        
-        .feature-card:nth-child(1) .feature-icon {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-        }
-        
-        .feature-card:nth-child(2) .feature-icon {
-            background: linear-gradient(135deg, var(--success), var(--accent));
-        }
-        
-        .feature-card:nth-child(3) .feature-icon {
-            background: linear-gradient(135deg, var(--warning), var(--danger));
         }
         
         .feature-title {
-            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--gray-900);
+            font-weight: 700;
             margin-bottom: 15px;
+            color: var(--white);
         }
         
         .feature-desc {
-            color: var(--gray-600);
+            color: var(--gray-text);
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-weight: 300;
         }
         
         .feature-list {
@@ -359,37 +409,50 @@
         .feature-list li {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            color: var(--gray-700);
+            gap: 12px;
+            margin-bottom: 12px;
+            color: var(--gray-text);
+            font-weight: 400;
         }
         
         .feature-list li::before {
-            content: '✓';
-            color: var(--success);
-            font-weight: bold;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--primary-purple);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary-purple);
         }
         
         /* Pricing Section */
         .pricing {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
-            color: white;
+            padding: 120px 0;
+            background: var(--black);
+            position: relative;
+        }
+        
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-top: 60px;
         }
         
         .pricing-card {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--medium-gray);
+            border: 1px solid var(--border-gray);
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 16px;
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
@@ -399,54 +462,65 @@
         .pricing-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            border-radius: 16px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .pricing-card:hover::before {
+            opacity: 1;
         }
         
         .pricing-card:hover {
             transform: translateY(-10px);
-            background: rgba(255,255,255,0.08);
+            box-shadow: 0 30px 60px rgba(139, 92, 246, 0.3);
         }
         
         .pricing-card.featured {
-            transform: scale(1.05);
-            background: rgba(255,255,255,0.1);
-            border: 2px solid var(--primary);
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
         }
         
         .plan-badge {
             position: absolute;
-            top: -15px;
+            top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            color: var(--white);
+            padding: 6px 20px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
         }
         
         .plan-name {
-            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 10px;
+            color: var(--white);
         }
         
         .plan-price {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 5px;
+            color: var(--white);
+            text-shadow: 0 0 20px var(--primary-purple);
         }
         
         .plan-period {
-            color: var(--gray-400);
+            color: var(--gray-text);
             margin-bottom: 30px;
+            font-weight: 300;
         }
         
         .plan-features {
@@ -458,95 +532,126 @@
         .plan-features li {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             margin-bottom: 15px;
-            color: var(--gray-300);
+            color: var(--gray-text);
+            font-weight: 400;
         }
         
         .plan-features li::before {
-            content: '✓';
-            color: var(--success);
-            font-weight: bold;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--primary-purple);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary-purple);
         }
         
         .plan-button {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            color: var(--white);
             padding: 15px 30px;
             border: none;
-            border-radius: 50px;
+            border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
             width: 100%;
+            font-size: 1rem;
         }
         
         .plan-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
         }
         
         /* CTA Section */
         .cta {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            padding: 120px 0;
+            background: var(--dark-gray);
             text-align: center;
+            position: relative;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
         }
         
         .cta-content {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
         }
         
         .cta-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
             margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--white), var(--light-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .cta-subtitle {
             font-size: 1.2rem;
+            color: var(--gray-text);
             margin-bottom: 40px;
-            opacity: 0.9;
+            font-weight: 300;
         }
         
         .cta-buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
+            flex-wrap: wrap;
         }
         
         .cta-button {
             padding: 18px 40px;
-            border-radius: 50px;
+            border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
         
         .cta-button.primary {
-            background: white;
-            color: var(--primary);
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            color: var(--white);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
         }
         
         .cta-button.secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: var(--white);
+            border: 2px solid var(--primary-purple);
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
         }
         
+        .cta-button.primary:hover {
+            box-shadow: 0 0 50px rgba(139, 92, 246, 0.6);
+        }
+        
+        .cta-button.secondary:hover {
+            background: var(--primary-purple);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+        }
+        
         /* Footer */
         footer {
-            background: var(--gray-900);
-            color: white;
-            padding: 60px 0 30px;
+            background: var(--black);
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border-gray);
         }
         
         .footer-content {
@@ -557,27 +662,30 @@
         }
         
         .footer-section h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 20px;
+            color: var(--white);
         }
         
         .footer-section p, .footer-section a {
-            color: var(--gray-400);
+            color: var(--gray-text);
             text-decoration: none;
             margin-bottom: 10px;
             display: block;
+            font-weight: 300;
+            transition: color 0.3s ease;
         }
         
         .footer-section a:hover {
-            color: white;
+            color: var(--white);
         }
         
         .footer-bottom {
-            border-top: 1px solid var(--gray-700);
+            border-top: 1px solid var(--border-gray);
             padding-top: 30px;
             text-align: center;
-            color: var(--gray-500);
+            color: var(--gray-text);
+            font-weight: 300;
         }
         
         /* Floating Buttons */
@@ -599,22 +707,24 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: white;
+            color: var(--white);
             font-size: 1.5rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
+            border: 2px solid var(--primary-purple);
         }
         
         .floating-btn:hover {
             transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
         }
         
         .whatsapp-btn {
             background: linear-gradient(135deg, #25d366, #128c7e);
+            border-color: #25d366;
         }
         
         .chat-btn {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
         }
         
         /* Responsive */
@@ -623,7 +733,7 @@
                 display: none;
             }
             
-            .hero-stats {
+            .hero-metrics {
                 flex-direction: column;
                 gap: 30px;
             }
@@ -641,34 +751,16 @@
                 align-items: center;
             }
             
-            header {
-                left: 20px;
-                right: 20px;
-                transform: none;
+            .slide-indicators {
+                display: none;
             }
         }
         
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-        
-        /* Scroll animations */
+        /* Scroll Animations */
         .scroll-animate {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: all 0.8s ease;
         }
         
         .scroll-animate.visible {
@@ -680,55 +772,65 @@
 <body>
     <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">G-PROP</div>
-            <ul class="nav-links">
-                <li><a href="#recursos">Recursos</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <a href="https://app.gprop.com.br" class="nav-cta">Entrar</a>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">G-PROP</div>
+                <ul class="nav-links">
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <a href="https://app.gprop.com.br" class="nav-cta">Entrar</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section com Slider -->
     <section class="hero">
-        <div class="floating-element floating-1"></div>
-        <div class="floating-element floating-2"></div>
-        <div class="floating-element floating-3"></div>
+        <div class="hero-slider">
+            <div class="slide slide-1 active"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+        </div>
         
         <div class="container">
-            <div class="hero-content animate-fade-in-up">
+            <div class="hero-content">
                 <div class="hero-badge">
-                    🚀 Revolucione sua imobiliária agora
+                    IA AVANÇADA • RESULTADOS REAIS
                 </div>
                 <h1 class="hero-title">
-                    Sua Imobiliária<br>
-                    <span style="background: linear-gradient(135deg, #10b981, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Turbinada por IA</span>
+                    O FUTURO DA<br>
+                    GESTÃO IMOBILIÁRIA
                 </h1>
                 <p class="hero-subtitle">
-                    Transforme leads em vendas com inteligência artificial. 
-                    Automatize processos e multiplique seus resultados.
+                    Plataforma de inteligência artificial que revoluciona como imobiliárias 
+                    captam leads, convertem vendas e maximizam lucros.
                 </p>
                 <a href="#planos" class="hero-cta">
-                    ⚡ Começar Agora
+                    COMEÇAR TRANSFORMAÇÃO
                 </a>
                 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Imobiliárias</span>
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <span class="metric-number">500+</span>
+                        <span class="metric-label">Imobiliárias Transformadas</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">300%</span>
-                        <span class="stat-label">Mais Vendas</span>
+                    <div class="metric">
+                        <span class="metric-number">300%</span>
+                        <span class="metric-label">Aumento em Vendas</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50k+</span>
-                        <span class="stat-label">Leads Convertidos</span>
+                    <div class="metric">
+                        <span class="metric-number">50K+</span>
+                        <span class="metric-label">Leads Convertidos</span>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="slide-indicators">
+            <div class="indicator active" onclick="currentSlide(1)"></div>
+            <div class="indicator" onclick="currentSlide(2)"></div>
+            <div class="indicator" onclick="currentSlide(3)"></div>
         </div>
     </section>
 
@@ -736,53 +838,56 @@
     <section class="features" id="recursos">
         <div class="container">
             <div class="section-header scroll-animate">
-                <div class="section-badge">🎯 Recursos Poderosos</div>
-                <h2 class="section-title">Tecnologia que Gera Resultados</h2>
+                <div class="section-badge">TECNOLOGIA AVANÇADA</div>
+                <h2 class="section-title">RECURSOS DE IA</h2>
                 <p class="section-subtitle">
-                    Ferramentas inteligentes que transformam sua forma de trabalhar
+                    Ferramentas inteligentes que transformam dados em resultados
                 </p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card scroll-animate">
-                    <div class="feature-icon">🤖</div>
-                    <h3 class="feature-title">IA Conversacional</h3>
+                    <div class="feature-number">01</div>
+                    <h3 class="feature-title">CONVERSÃO INTELIGENTE</h3>
                     <p class="feature-desc">
-                        Nossa IA responde seus leads 24/7, qualifica interessados e agenda visitas automaticamente.
+                        Sistema de IA que analisa comportamento de leads e otimiza automaticamente 
+                        suas campanhas para máxima conversão.
                     </p>
                     <ul class="feature-list">
-                        <li>Respostas instantâneas</li>
-                        <li>Qualificação automática</li>
-                        <li>Agendamento inteligente</li>
-                        <li>Follow-up personalizado</li>
+                        <li>Análise preditiva de comportamento</li>
+                        <li>Otimização automática de campanhas</li>
+                        <li>Segmentação inteligente de público</li>
+                        <li>ROI 300% superior à concorrência</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card scroll-animate">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Analytics Avançado</h3>
+                    <div class="feature-number">02</div>
+                    <h3 class="feature-title">AUTOMAÇÃO TOTAL</h3>
                     <p class="feature-desc">
-                        Dashboards completos com insights que mostram exatamente onde focar para vender mais.
+                        Workflows inteligentes que automatizam todo seu processo comercial, 
+                        desde o primeiro contato até o fechamento da venda.
                     </p>
                     <ul class="feature-list">
-                        <li>ROI por canal</li>
-                        <li>Funil de vendas</li>
-                        <li>Previsões de mercado</li>
-                        <li>Relatórios automatizados</li>
+                        <li>Follow-up automático personalizado</li>
+                        <li>Agendamento inteligente de visitas</li>
+                        <li>Contratos digitais integrados</li>
+                        <li>Pipeline de vendas otimizado</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card scroll-animate">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Automação Total</h3>
+                    <div class="feature-number">03</div>
+                    <h3 class="feature-title">ANALYTICS PROFISSIONAL</h3>
                     <p class="feature-desc">
-                        Automatize tarefas repetitivas e foque no que realmente importa: vender mais imóveis.
+                        Dashboards em tempo real com métricas avançadas que revelam 
+                        exatamente onde investir para crescer exponencialmente.
                     </p>
                     <ul class="feature-list">
-                        <li>Workflows inteligentes</li>
-                        <li>Contratos digitais</li>
-                        <li>Integração bancária</li>
-                        <li>Notificações automáticas</li>
+                        <li>Métricas em tempo real</li>
+                        <li>Previsões de mercado com IA</li>
+                        <li>Relatórios de performance detalhados</li>
+                        <li>Insights estratégicos personalizados</li>
                     </ul>
                 </div>
             </div>
@@ -793,60 +898,63 @@
     <section class="pricing" id="planos">
         <div class="container">
             <div class="section-header scroll-animate">
-                <div class="section-badge">💎 Planos Exclusivos</div>
-                <h2 class="section-title">Escolha seu Crescimento</h2>
+                <div class="section-badge">PLANOS PREMIUM</div>
+                <h2 class="section-title">ESCOLHA SEU CRESCIMENTO</h2>
                 <p class="section-subtitle">
-                    Planos que se adaptam ao tamanho da sua ambição
+                    Soluções escaláveis para imobiliárias de todos os tamanhos
                 </p>
             </div>
             
             <div class="pricing-grid">
                 <div class="pricing-card scroll-animate">
-                    <h3 class="plan-name">Starter</h3>
-                    <div class="plan-price">R$ 149<span style="font-size: 1.5rem;">,90</span></div>
+                    <h3 class="plan-name">STARTER</h3>
+                    <div class="plan-price">149</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Até 50 contratos</li>
-                        <li>IA básica para leads</li>
-                        <li>CRM essencial</li>
-                        <li>Suporte por email</li>
-                        <li>1 usuário</li>
+                        <li>Até 50 contratos mensais</li>
+                        <li>IA básica para qualificação</li>
+                        <li>CRM essencial integrado</li>
+                        <li>Suporte técnico por email</li>
+                        <li>Dashboard de métricas básico</li>
+                        <li>1 usuário incluído</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero o plano Starter do G-PROP!" class="plan-button">
-                        Começar Agora
+                    <a href="https://wa.me/5511999999999?text=Quero o plano STARTER do G-PROP!" class="plan-button">
+                        COMEÇAR AGORA
                     </a>
                 </div>
                 
                 <div class="pricing-card featured scroll-animate">
-                    <div class="plan-badge">🔥 Mais Popular</div>
-                    <h3 class="plan-name">Professional</h3>
-                    <div class="plan-price">R$ 299<span style="font-size: 1.5rem;">,90</span></div>
+                    <div class="plan-badge">MAIS POPULAR</div>
+                    <h3 class="plan-name">PROFESSIONAL</h3>
+                    <div class="plan-price">299</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Até 200 contratos</li>
-                        <li>IA avançada + Analytics</li>
-                        <li>Automação completa</li>
-                        <li>Suporte prioritário</li>
-                        <li>5 usuários</li>
+                        <li>Até 200 contratos mensais</li>
+                        <li>IA avançada + Analytics completo</li>
+                        <li>Automação total de workflows</li>
+                        <li>Suporte prioritário 24/7</li>
+                        <li>Integração com bancos e cartórios</li>
+                        <li>Até 5 usuários incluídos</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero o plano Professional do G-PROP!" class="plan-button">
-                        Começar Agora
+                    <a href="https://wa.me/5511999999999?text=Quero o plano PROFESSIONAL do G-PROP!" class="plan-button">
+                        COMEÇAR AGORA
                     </a>
                 </div>
                 
                 <div class="pricing-card scroll-animate">
-                    <h3 class="plan-name">Enterprise</h3>
-                    <div class="plan-price">R$ 499<span style="font-size: 1.5rem;">,90</span></div>
+                    <h3 class="plan-name">ENTERPRISE</h3>
+                    <div class="plan-price">599</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
                         <li>Contratos ilimitados</li>
-                        <li>IA personalizada</li>
-                        <li>API dedicada</li>
-                        <li>Gerente de sucesso</li>
+                        <li>IA personalizada para seu negócio</li>
+                        <li>API dedicada + customizações</li>
+                        <li>Gerente de sucesso dedicado</li>
+                        <li>White-label disponível</li>
                         <li>Usuários ilimitados</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero o plano Enterprise do G-PROP!" class="plan-button">
-                        Começar Agora
+                    <a href="https://wa.me/5511999999999?text=Quero o plano ENTERPRISE do G-PROP!" class="plan-button">
+                        COMEÇAR AGORA
                     </a>
                 </div>
             </div>
@@ -857,16 +965,17 @@
     <section class="cta" id="contato">
         <div class="container">
             <div class="cta-content scroll-animate">
-                <h2 class="cta-title">Pronto para Revolucionar?</h2>
+                <h2 class="cta-title">PRONTO PARA DOMINAR?</h2>
                 <p class="cta-subtitle">
-                    Junte-se a centenas de imobiliárias que já transformaram seus resultados com o G-PROP
+                    Junte-se às imobiliárias que já revolucionaram seus resultados 
+                    e estão liderando o mercado com tecnologia de ponta.
                 </p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/5511999999999?text=Quero uma demonstração do G-PROP!" class="cta-button primary">
-                        📱 Falar no WhatsApp
+                    <a href="https://wa.me/5511999999999?text=Quero uma demonstração completa do G-PROP!" class="cta-button primary">
+                        DEMONSTRAÇÃO EXCLUSIVA
                     </a>
                     <a href="https://app.gprop.com.br" class="cta-button secondary">
-                        🚀 Testar Grátis
+                        TESTAR GRATUITAMENTE
                     </a>
                 </div>
             </div>
@@ -879,44 +988,71 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>G-PROP</h3>
-                    <p>A revolução na gestão imobiliária chegou. Transforme sua imobiliária com inteligência artificial.</p>
+                    <p>A plataforma de IA que está revolucionando a gestão imobiliária no Brasil. Tecnologia de ponta para resultados extraordinários.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Produto</h3>
-                    <a href="#recursos">Recursos</a>
-                    <a href="#planos">Planos</a>
-                    <a href="https://app.gprop.com.br">Acessar Sistema</a>
+                    <h3>PRODUTO</h3>
+                    <a href="#recursos">Recursos IA</a>
+                    <a href="#planos">Planos Premium</a>
+                    <a href="https://app.gprop.com.br">Acessar Plataforma</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Suporte</h3>
-                    <a href="https://wa.me/5511999999999">WhatsApp</a>
-                    <a href="mailto:suporte@gprop.com.br">Email</a>
-                    <a href="#">Central de Ajuda</a>
+                    <h3>SUPORTE</h3>
+                    <a href="https://wa.me/5511999999999">WhatsApp Direto</a>
+                    <a href="mailto:suporte@gprop.com.br">Suporte Técnico</a>
+                    <a href="#">Central de Conhecimento</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Empresa</h3>
-                    <a href="#">Sobre</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Carreiras</a>
+                    <h3>EMPRESA</h3>
+                    <a href="#">Sobre a G-PROP</a>
+                    <a href="#">Cases de Sucesso</a>
+                    <a href="#">Parceiros</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 G-PROP. Todos os direitos reservados. Feito com 💜 para revolucionar o mercado imobiliário.</p>
+                <p>&copy; 2025 G-PROP. Todos os direitos reservados. Tecnologia que transforma negócios.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/5511999999999?text=Olá! Quero conhecer o G-PROP" class="floating-btn whatsapp-btn" title="WhatsApp">
+        <a href="https://wa.me/5511999999999?text=Olá! Quero revolucionar minha imobiliária com G-PROP" class="floating-btn whatsapp-btn" title="WhatsApp">
             💬
         </a>
-        <a href="#" class="floating-btn chat-btn" title="Chat Online" onclick="alert('Chat disponível em breve!')">
-            💬
+        <a href="#" class="floating-btn chat-btn" title="Chat Especialista" onclick="alert('Chat com especialista disponível em breve!')">
+            🎯
         </a>
     </div>
 
     <script>
+        // Hero slider functionality
+        let slideIndex = 1;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        function showSlide(n) {
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[slideIndex - 1].classList.add('active');
+            indicators[slideIndex - 1].classList.add('active');
+        }
+        
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+        
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+        
+        // Auto slide every 4 seconds
+        setInterval(nextSlide, 4000);
+        
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
@@ -953,11 +1089,9 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 10px 40px rgba(0,0,0,0.15)';
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)';
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
             }
         });
     </script>
