@@ -22,7 +22,7 @@
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzE0Nzc5QSIvPgo8cGF0aCBkPSJNOCAxMkwxNiA2TDI0IDEyVjI0SDhWMTJaIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KPC9zdmc+">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -42,13 +42,14 @@
             --gray-100: #f1f5f9;
             --gray-200: #e2e8f0;
             --gray-600: #475569;
+            --gray-700: #334155;
             --gray-900: #0f172a;
             --white: #ffffff;
             --orange: #ea580c;
         }
         
         body {
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: var(--gray-900);
             background: var(--white);
@@ -58,7 +59,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
         
         /* Header */
@@ -66,12 +67,12 @@
             background: rgba(30, 64, 175, 0.96);
             backdrop-filter: blur(12px);
             color: white;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 8px 32px rgba(30, 64, 175, 0.2);
+            box-shadow: 0 4px 20px rgba(30, 64, 175, 0.15);
             transition: all 0.3s ease;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -83,21 +84,17 @@
         }
         
         .logo {
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-size: 1.8rem;
+            font-weight: 700;
             text-decoration: none;
             color: white;
-            font-family: 'Space Grotesk', sans-serif;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, #ffffff, #bfdbfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -0.5px;
         }
         
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             align-items: center;
         }
         
@@ -108,6 +105,7 @@
             transition: all 0.3s ease;
             position: relative;
             padding: 0.5rem 0;
+            font-size: 0.95rem;
         }
         
         .nav-links a:hover {
@@ -133,21 +131,20 @@
         .cta-button {
             background: linear-gradient(135deg, var(--light-green), var(--success-green));
             color: white;
-            padding: 14px 28px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 60px;
+            border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
-            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+            font-size: 0.9rem;
         }
         
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.35);
-            filter: brightness(1.1);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.35);
         }
         
         /* Hero Slider */
@@ -168,7 +165,7 @@
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 1.2s ease-in-out;
+            transition: opacity 1s ease-in-out;
             color: white;
         }
         
@@ -178,15 +175,15 @@
         
         .slide-content {
             text-align: center;
-            max-width: 900px;
-            animation: slideUp 1s ease-out;
+            max-width: 800px;
+            animation: slideUp 0.8s ease-out;
             padding: 0 2rem;
         }
         
         @keyframes slideUp {
             from {
                 opacity: 0;
-                transform: translateY(60px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -195,32 +192,31 @@
         }
         
         .slide h1 {
-            font-size: 4.5rem;
-            margin-bottom: 2rem;
-            font-weight: 800;
-            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.1;
             background: linear-gradient(135deg, #ffffff, #bfdbfe, #22c55e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
         .slide p {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
             font-weight: 400;
-            max-width: 700px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
+            line-height: 1.6;
         }
         
         .hero-buttons {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -228,32 +224,31 @@
         .btn-primary {
             background: linear-gradient(135deg, var(--light-green), var(--success-green));
             color: white;
-            padding: 20px 40px;
+            padding: 16px 32px;
             border: none;
-            border-radius: 60px;
-            font-size: 1.2rem;
-            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3);
         }
         
         .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.4);
-            filter: brightness(1.1);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4);
         }
         
         .btn-secondary {
             background: rgba(255, 255, 255, 0.1);
             color: white;
-            padding: 20px 40px;
+            padding: 16px 32px;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 60px;
-            font-size: 1.2rem;
+            border-radius: 50px;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -286,8 +281,8 @@
         }
         
         .shape:nth-child(1) {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             top: 20%;
             left: 10%;
             animation-delay: 0s;
@@ -302,8 +297,8 @@
         }
         
         .shape:nth-child(3) {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             bottom: 30%;
             left: 20%;
             animation-delay: 4s;
@@ -314,23 +309,23 @@
                 transform: translateY(0px) rotate(0deg);
             }
             50% {
-                transform: translateY(-20px) rotate(180deg);
+                transform: translateY(-15px) rotate(180deg);
             }
         }
         
         /* Slider Indicators */
         .slider-indicators {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 16px;
+            gap: 12px;
         }
         
         .indicator {
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.4);
             cursor: pointer;
@@ -341,33 +336,32 @@
         .indicator.active {
             background: var(--light-green);
             border-color: var(--light-green);
-            transform: scale(1.3);
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+            transform: scale(1.2);
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
         }
         
         /* Features Section */
         .features {
-            padding: 140px 0;
+            padding: 100px 0;
             background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
-            position: relative;
         }
         
         .section-title {
             text-align: center;
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
             color: var(--gray-900);
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.2;
         }
         
         .section-subtitle {
             text-align: center;
-            font-size: 1.3rem;
-            margin-bottom: 5rem;
+            font-size: 1.1rem;
+            margin-bottom: 3.5rem;
             color: var(--gray-600);
-            max-width: 650px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 400;
@@ -375,18 +369,18 @@
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
         
         .feature-card {
             background: white;
-            padding: 3.5rem 2.5rem;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(30, 64, 175, 0.08);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(30, 64, 175, 0.08);
             text-align: left;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             border: 1px solid var(--gray-100);
             position: relative;
             overflow: hidden;
@@ -398,69 +392,69 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, var(--light-blue), var(--light-green));
         }
         
         .feature-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 80px rgba(30, 64, 175, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(30, 64, 175, 0.12);
             border-color: var(--light-blue);
         }
         
         .feature-icon {
-            width: 90px;
-            height: 90px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
-            border-radius: 24px;
-            margin-bottom: 2rem;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
-            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.2);
+            font-size: 1.5rem;
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.15);
         }
         
         .feature-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
             color: var(--gray-900);
-            font-weight: 700;
-            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
         }
         
         .feature-card p {
             color: var(--gray-600);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
         }
         
         .feature-list {
             list-style: none;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
         
         .feature-list li {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: var(--gray-700);
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         
         .feature-list li::before {
             content: '●';
             color: var(--light-green);
-            margin-right: 16px;
-            font-size: 1.3rem;
+            margin-right: 12px;
+            font-size: 1rem;
             font-weight: bold;
         }
         
         /* Pricing Section */
         .pricing {
-            padding: 140px 0;
+            padding: 100px 0;
             background: linear-gradient(135deg, var(--gray-900) 0%, var(--dark-blue) 100%);
             color: white;
             position: relative;
@@ -485,18 +479,21 @@
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 5rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .pricing-card {
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(20px);
-            padding: 3.5rem 2.5rem;
-            border-radius: 24px;
+            padding: 2.5rem 1.5rem;
+            border-radius: 16px;
             text-align: center;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
@@ -508,12 +505,12 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, var(--light-green), var(--success-green));
         }
         
         .pricing-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             background: rgba(255, 255, 255, 0.12);
             border-color: rgba(255, 255, 255, 0.2);
         }
@@ -522,38 +519,38 @@
             background: rgba(255, 255, 255, 0.15);
             transform: scale(1.05);
             border: 2px solid var(--light-green);
-            box-shadow: 0 20px 60px rgba(34, 197, 94, 0.2);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.2);
         }
         
         .pricing-card.featured::before {
-            height: 6px;
+            height: 4px;
             background: linear-gradient(90deg, var(--orange), var(--light-green), var(--success-green));
         }
         
         .plan-badge {
             background: linear-gradient(135deg, var(--orange), #f97316);
             color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             display: inline-block;
         }
         
         .plan-name {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
             color: white;
         }
         
         .plan-price {
-            font-size: 4rem;
-            font-weight: 800;
+            font-size: 2.2rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #ffffff, var(--light-green));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -561,41 +558,41 @@
         }
         
         .plan-period {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             opacity: 0.8;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             color: rgba(255, 255, 255, 0.8);
         }
         
         .plan-contracts {
             background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
-            padding: 1.2rem;
-            border-radius: 16px;
-            margin-bottom: 2.5rem;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 0.85rem;
         }
         
         .plan-features {
             list-style: none;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-align: left;
         }
         
         .plan-features li {
             display: flex;
             align-items: center;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.8rem;
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.9);
         }
         
         .plan-features li::before {
             content: '●';
             color: var(--light-green);
-            margin-right: 16px;
-            font-size: 1.3rem;
+            margin-right: 10px;
+            font-size: 1rem;
             flex-shrink: 0;
             font-weight: bold;
         }
@@ -603,134 +600,168 @@
         .plan-button {
             background: linear-gradient(135deg, var(--light-green), var(--success-green));
             color: white;
-            padding: 18px 36px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 60px;
-            font-weight: 700;
+            border-radius: 50px;
+            font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
             width: 100%;
-            font-size: 1.1rem;
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+            font-size: 0.9rem;
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3);
         }
         
         .plan-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
-            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
         }
         
         /* WhatsApp Button */
         .whatsapp-btn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 25px;
+            right: 25px;
             background: linear-gradient(135deg, #25d366, #128c7e);
             color: white;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
             text-decoration: none;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             z-index: 1000;
             animation: pulse 3s infinite;
         }
         
         .whatsapp-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+        
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
         
         @keyframes pulse {
             0% {
-                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             }
             50% {
-                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7), 0 0 0 20px rgba(37, 211, 102, 0.1);
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7), 0 0 0 15px rgba(37, 211, 102, 0.1);
             }
             100% {
-                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             }
+        }
+        
+        /* Chat Button */
+        .chat-btn {
+            position: fixed;
+            bottom: 95px;
+            right: 25px;
+            background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .chat-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
+        }
+        
+        .chat-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
         
         /* Stats Section */
         .stats {
-            padding: 140px 0;
+            padding: 100px 0;
             background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 4rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
         
         .stat-item {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2.5rem 1.5rem;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(30, 64, 175, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.05);
             border: 1px solid var(--gray-100);
             transition: all 0.3s ease;
         }
         
         .stat-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 25px 60px rgba(30, 64, 175, 0.1);
+            box-shadow: 0 20px 50px rgba(30, 64, 175, 0.1);
         }
         
         .stat-number {
-            font-size: 4.5rem;
-            font-weight: 800;
+            font-size: 3rem;
+            font-weight: 700;
             background: linear-gradient(135deg, var(--light-blue), var(--light-green));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1rem;
-            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
         }
         
         .stat-label {
-            font-size: 1.3rem;
+            font-size: 1rem;
             color: var(--gray-600);
-            font-weight: 600;
+            font-weight: 500;
         }
         
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--gray-900) 0%, var(--dark-blue) 100%);
             color: white;
-            padding: 4rem 0 2rem;
+            padding: 3rem 0 1.5rem;
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
         
         .footer-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
             color: var(--light-green);
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         
         .footer-section p, .footer-section a {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            line-height: 2;
-            font-size: 1rem;
+            line-height: 1.8;
+            font-size: 0.9rem;
         }
         
         .footer-section a:hover {
@@ -740,19 +771,31 @@
         
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             text-align: center;
             color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
         }
         
         /* Responsive */
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+        
         @media (max-width: 768px) {
             .slide h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             
             .slide p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             
             .hero-buttons {
@@ -761,46 +804,49 @@
             }
             
             .section-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
-            .features-grid, .pricing-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .pricing-card.featured {
-                transform: none;
-                scale: 1;
-            }
-            
             .container {
                 padding: 0 16px;
+            }
+            
+            .whatsapp-btn, .chat-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+            }
+            
+            .chat-btn {
+                bottom: 80px;
             }
         }
         
         @media (max-width: 480px) {
             .feature-card, .pricing-card {
-                padding: 2.5rem 1.5rem;
+                padding: 2rem 1.5rem;
             }
             
             .plan-price {
-                font-size: 3rem;
+                font-size: 2rem;
             }
             
             .slide h1 {
-                font-size: 2.5rem;
-            }
-            
-            .whatsapp-btn {
-                width: 60px;
-                height: 60px;
-                bottom: 20px;
-                right: 20px;
+                font-size: 2rem;
             }
         }
     </style>
@@ -870,13 +916,13 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Recursos Poderosos</h2>
-            <p class="section-subtitle">Tecnologia de ponta para revolucionar sua gestão imobiliária e potencializar seus resultados</p>
+            <h2 class="section-title">Recursos Inteligentes</h2>
+            <p class="section-subtitle">Tecnologia avançada para revolucionar sua gestão imobiliária e maximizar resultados</p>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🏠</div>
-                    <h3>Gestão Completa de Imóveis</h3>
+                    <h3>Gestão de Imóveis</h3>
                     <p>Plataforma completa para cadastrar, organizar e gerenciar todo seu portfólio imobiliário</p>
                     <ul class="feature-list">
                         <li>Cadastro completo de imóveis</li>
@@ -889,8 +935,8 @@
                 
                 <div class="feature-card">
                     <div class="feature-icon">🤝</div>
-                    <h3>Contratos Inteligentes</h3>
-                    <p>Automatize a criação e gestão de contratos com templates profissionais e assinatura digital</p>
+                    <h3>Contratos Digitais</h3>
+                    <p>Automatize a criação e gestão de contratos com templates profissionais</p>
                     <ul class="feature-list">
                         <li>Templates personalizáveis</li>
                         <li>Assinatura digital certificada</li>
@@ -903,7 +949,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
                     <h3>Controle Financeiro</h3>
-                    <p>Monitore receitas, despesas e comissões com relatórios detalhados e análises avançadas</p>
+                    <p>Monitore receitas, despesas e comissões com relatórios detalhados</p>
                     <ul class="feature-list">
                         <li>Controle de inadimplência</li>
                         <li>Cálculo automático de comissões</li>
@@ -965,73 +1011,66 @@
                 <!-- Plano Econômico -->
                 <div class="pricing-card">
                     <h3 class="plan-name">Econômico</h3>
-                    <div class="plan-price">R$ 149<span style="font-size: 2rem;">,90</span></div>
+                    <div class="plan-price">R$ 149<span style="font-size: 1.2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
-                    <div class="plan-contracts">Até 50 contratos ativos</div>
+                    <div class="plan-contracts">Até 50 contratos</div>
                     <ul class="plan-features">
                         <li>Gestão básica de imóveis</li>
                         <li>Contratos simples</li>
                         <li>Relatórios essenciais</li>
                         <li>Suporte por email</li>
                         <li>1 usuário incluído</li>
-                        <li>Backup automático</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Econômico do G-PROP" class="plan-button">Contratar Agora</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Econômico do G-PROP" class="plan-button">Contratar</a>
                 </div>
                 
                 <!-- Plano Essencial -->
                 <div class="pricing-card featured">
-                    <div class="plan-badge">🔥 Mais Popular</div>
+                    <div class="plan-badge">🔥 Popular</div>
                     <h3 class="plan-name">Essencial</h3>
-                    <div class="plan-price">R$ 179<span style="font-size: 2rem;">,90</span></div>
+                    <div class="plan-price">R$ 179<span style="font-size: 1.2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
-                    <div class="plan-contracts">Até 100 contratos ativos</div>
+                    <div class="plan-contracts">Até 100 contratos</div>
                     <ul class="plan-features">
-                        <li>Todas as funcionalidades do Econômico</li>
-                        <li>IA para qualificação de leads</li>
+                        <li>Tudo do Econômico</li>
+                        <li>IA para leads</li>
                         <li>Assinatura digital</li>
                         <li>Relatórios avançados</li>
-                        <li>3 usuários incluídos</li>
-                        <li>Suporte prioritário</li>
-                        <li>Integrações básicas</li>
+                        <li>3 usuários</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Essencial do G-PROP" class="plan-button">Contratar Agora</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Essencial do G-PROP" class="plan-button">Contratar</a>
                 </div>
                 
                 <!-- Plano Enterprise -->
                 <div class="pricing-card">
                     <h3 class="plan-name">Enterprise</h3>
-                    <div class="plan-price">R$ 199<span style="font-size: 2rem;">,90</span></div>
+                    <div class="plan-price">R$ 199<span style="font-size: 1.2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
-                    <div class="plan-contracts">Até 150 contratos ativos</div>
+                    <div class="plan-contracts">Até 150 contratos</div>
                     <ul class="plan-features">
-                        <li>Todas as funcionalidades do Essencial</li>
-                        <li>IA avançada para leads</li>
-                        <li>Integração bancária completa</li>
-                        <li>Customizações avançadas</li>
-                        <li>5 usuários incluídos</li>
-                        <li>Suporte 24/7</li>
-                        <li>API completa</li>
+                        <li>Tudo do Essencial</li>
+                        <li>IA avançada</li>
+                        <li>Integração bancária</li>
+                        <li>Customizações</li>
+                        <li>5 usuários</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Enterprise do G-PROP" class="plan-button">Contratar Agora</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Enterprise do G-PROP" class="plan-button">Contratar</a>
                 </div>
                 
                 <!-- Plano Total Turbo -->
                 <div class="pricing-card">
                     <h3 class="plan-name">Total Turbo</h3>
-                    <div class="plan-price">R$ 229<span style="font-size: 2rem;">,90</span></div>
+                    <div class="plan-price">R$ 229<span style="font-size: 1.2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
-                    <div class="plan-contracts">Até 300 contratos ativos</div>
+                    <div class="plan-contracts">Até 300 contratos</div>
                     <ul class="plan-features">
-                        <li>Todas as funcionalidades do Enterprise</li>
-                        <li>Automação completa de processos</li>
+                        <li>Tudo do Enterprise</li>
+                        <li>Automação completa</li>
                         <li>API personalizada</li>
-                        <li>Relatórios executivos</li>
+                        <li>Gerente dedicado</li>
                         <li>Usuários ilimitados</li>
-                        <li>Gerente de conta dedicado</li>
-                        <li>Treinamento personalizado</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Total Turbo do G-PROP" class="plan-button">Contratar Agora</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Total Turbo do G-PROP" class="plan-button">Contratar</a>
                 </div>
             </div>
         </div>
@@ -1070,7 +1109,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>G-PROP</h3>
-                    <p>A plataforma de gestão imobiliária mais completa do Brasil. Transforme sua imobiliária com inteligência artificial e tecnologia de ponta.</p>
+                    <p>A plataforma de gestão imobiliária mais completa do Brasil. Transforme sua imobiliária com inteligência artificial.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contato</h3>
@@ -1081,27 +1120,38 @@
                 <div class="footer-section">
                     <h3>Links Úteis</h3>
                     <p><a href="#features">Recursos</a></p>
-                    <p><a href="#pricing">Planos e Preços</a></p>
+                    <p><a href="#pricing">Planos</a></p>
                     <p><a href="https://app.gprop.com.br">Acessar Sistema</a></p>
-                    <p><a href="#stats">Casos de Sucesso</a></p>
+                    <p><a href="#stats">Resultados</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Suporte</h3>
                     <p><a href="https://wa.me/5511999999999">💬 Chat WhatsApp</a></p>
                     <p><a href="mailto:suporte@gprop.com.br">📧 Suporte Técnico</a></p>
                     <p><a href="#pricing">📚 Central de Ajuda</a></p>
-                    <p><a href="#features">🎥 Tutoriais</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 G-PROP. Todos os direitos reservados. | Gestão Imobiliária Inteligente com IA</p>
+                <p>&copy; 2025 G-PROP. Todos os direitos reservados. | Gestão Imobiliária Inteligente</p>
             </div>
         </div>
     </footer>
 
+    <!-- Chat Button -->
+    <a href="#" class="chat-btn" title="Chat em tempo real" onclick="toggleChat()">
+        <svg class="chat-icon" viewBox="0 0 24 24">
+            <path d="M20 2H4C2.9 2 2 2.9 2 4V18L6 14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2ZM20 12H5.2L4 13.2V4H20V12Z"/>
+            <circle cx="8" cy="8" r="1"/>
+            <circle cx="12" cy="8" r="1"/>
+            <circle cx="16" cy="8" r="1"/>
+        </svg>
+    </a>
+
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de conhecer melhor o G-PROP e ver como pode transformar minha imobiliária" class="whatsapp-btn" title="Falar no WhatsApp">
-        💬
+    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de conhecer melhor o G-PROP" class="whatsapp-btn" title="Falar no WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.864 3.687"/>
+        </svg>
     </a>
 
     <script>
@@ -1130,7 +1180,7 @@
         }
         
         // Auto slide
-        setInterval(nextSlide, 6000);
+        setInterval(nextSlide, 5000);
         
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1149,19 +1199,19 @@
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
+            if (window.scrollY > 50) {
                 header.style.background = 'rgba(30, 64, 175, 0.98)';
-                header.style.boxShadow = '0 12px 40px rgba(30, 64, 175, 0.3)';
+                header.style.boxShadow = '0 8px 30px rgba(30, 64, 175, 0.25)';
             } else {
                 header.style.background = 'rgba(30, 64, 175, 0.96)';
-                header.style.boxShadow = '0 8px 32px rgba(30, 64, 175, 0.2)';
+                header.style.boxShadow = '0 4px 20px rgba(30, 64, 175, 0.15)';
             }
         });
         
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -30px 0px'
         };
         
         const observer = new IntersectionObserver((entries) => {
@@ -1173,13 +1223,18 @@
             });
         }, observerOptions);
         
-        // Observe feature cards
+        // Observe cards
         document.querySelectorAll('.feature-card, .pricing-card, .stat-item').forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(card);
         });
+        
+        // Chat functionality
+        function toggleChat() {
+            alert('Chat em tempo real será implementado em breve! Por enquanto, use o WhatsApp para entrar em contato.');
+        }
     </script>
 </body>
 </html>
