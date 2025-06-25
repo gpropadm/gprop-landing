@@ -19,10 +19,10 @@
     <meta property="twitter:description" content="Sistema completo de gestão imobiliária com IA. Sua imobiliária agora fala com seus leads!">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzY2MzNGRiIvPgo8cGF0aCBkPSJNOCAxMkwxNiA2TDI0IDEyVjI0SDhWMTJaIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KPC9zdmc+">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzE0Nzc5QSIvPgo8cGF0aCBkPSJNOCAxMkwxNiA2TDI0IDEyVjI0SDhWMTJaIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KPC9zdmc+">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -32,18 +32,23 @@
         }
         
         :root {
-            --purple-dark: #4c1d95;
-            --purple-medium: #6633ff;
-            --purple-light: #8b5cf6;
-            --purple-extra-light: #f3f0ff;
-            --green: #10b981;
-            --gray-50: #f9fafb;
-            --gray-900: #111827;
+            --primary-blue: #1e40af;
+            --dark-blue: #1e3a8a;
+            --light-blue: #3b82f6;
+            --accent-green: #059669;
+            --light-green: #10b981;
+            --success-green: #22c55e;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-600: #475569;
+            --gray-900: #0f172a;
             --white: #ffffff;
+            --orange: #ea580c;
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: var(--gray-900);
             background: var(--white);
@@ -53,21 +58,22 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         
         /* Header */
         header {
-            background: rgba(76, 29, 149, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(30, 64, 175, 0.96);
+            backdrop-filter: blur(12px);
             color: white;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(76, 29, 149, 0.3);
+            box-shadow: 0 8px 32px rgba(30, 64, 175, 0.2);
             transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         nav {
@@ -77,40 +83,46 @@
         }
         
         .logo {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
             text-decoration: none;
             color: white;
-            font-family: 'Poppins', sans-serif;
-            letter-spacing: -0.5px;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff, #bfdbfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
         }
         
         .nav-links a {
-            color: white;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
+            padding: 0.5rem 0;
         }
         
         .nav-links a:hover {
-            color: #c7d2fe;
+            color: white;
+            transform: translateY(-1px);
         }
         
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -2px;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--purple-light);
+            background: linear-gradient(90deg, var(--light-green), var(--success-green));
             transition: width 0.3s ease;
         }
         
@@ -119,21 +131,23 @@
         }
         
         .cta-button {
-            background: linear-gradient(135deg, var(--purple-medium), var(--purple-light));
+            background: linear-gradient(135deg, var(--light-green), var(--success-green));
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border: none;
-            border-radius: 50px;
+            border-radius: 60px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(102, 51, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+            font-size: 0.95rem;
         }
         
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 51, 255, 0.4);
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.35);
+            filter: brightness(1.1);
         }
         
         /* Hero Slider */
@@ -141,6 +155,7 @@
             position: relative;
             height: 100vh;
             overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 50%, #1e293b 100%);
         }
         
         .slide {
@@ -149,12 +164,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.2s ease-in-out;
             color: white;
         }
         
@@ -164,14 +178,15 @@
         
         .slide-content {
             text-align: center;
-            max-width: 800px;
-            animation: slideUp 0.8s ease-out;
+            max-width: 900px;
+            animation: slideUp 1s ease-out;
+            padding: 0 2rem;
         }
         
         @keyframes slideUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(60px);
             }
             to {
                 opacity: 1;
@@ -180,209 +195,309 @@
         }
         
         .slide h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
+            font-size: 4.5rem;
+            margin-bottom: 2rem;
             font-weight: 800;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             line-height: 1.1;
-            background: linear-gradient(135deg, #ffffff, #c7d2fe);
+            background: linear-gradient(135deg, #ffffff, #bfdbfe, #22c55e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
         .slide p {
-            font-size: 1.4rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            font-weight: 300;
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
         }
         
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             justify-content: center;
             flex-wrap: wrap;
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #ffffff, #f1f5f9);
-            color: var(--purple-dark);
-            padding: 18px 36px;
+            background: linear-gradient(135deg, var(--light-green), var(--success-green));
+            color: white;
+            padding: 20px 40px;
             border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
+            border-radius: 60px;
+            font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-block;
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
         }
         
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.4);
+            filter: brightness(1.1);
         }
         
         .btn-secondary {
-            background: transparent;
+            background: rgba(255, 255, 255, 0.1);
             color: white;
-            padding: 18px 36px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 50px;
-            font-size: 1.1rem;
+            padding: 20px 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 60px;
+            font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             backdrop-filter: blur(10px);
         }
         
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
             transform: translateY(-2px);
+        }
+        
+        /* Floating Elements */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .shape:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
         }
         
         /* Slider Indicators */
         .slider-indicators {
             position: absolute;
-            bottom: 30px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 12px;
+            gap: 16px;
         }
         
         .indicator {
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.4);
             cursor: pointer;
             transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
         
         .indicator.active {
-            background: white;
-            transform: scale(1.2);
+            background: var(--light-green);
+            border-color: var(--light-green);
+            transform: scale(1.3);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
         }
         
         /* Features Section */
         .features {
-            padding: 120px 0;
-            background: var(--gray-50);
+            padding: 140px 0;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+            position: relative;
         }
         
         .section-title {
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
             font-weight: 800;
-            color: var(--purple-dark);
-            font-family: 'Poppins', sans-serif;
+            color: var(--gray-900);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.2;
         }
         
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
-            margin-bottom: 4rem;
-            color: #6b7280;
-            max-width: 600px;
+            font-size: 1.3rem;
+            margin-bottom: 5rem;
+            color: var(--gray-600);
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 400;
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
         }
         
         .feature-card {
             background: white;
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(76, 29, 149, 0.1);
+            padding: 3.5rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(30, 64, 175, 0.08);
             text-align: left;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(139, 92, 246, 0.1);
+            transition: all 0.4s ease;
+            border: 1px solid var(--gray-100);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--light-blue), var(--light-green));
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(76, 29, 149, 0.2);
+            transform: translateY(-12px);
+            box-shadow: 0 30px 80px rgba(30, 64, 175, 0.15);
+            border-color: var(--light-blue);
         }
         
         .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--purple-medium), var(--purple-light));
-            border-radius: 20px;
-            margin-bottom: 1.5rem;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
+            border-radius: 24px;
+            margin-bottom: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.2);
         }
         
         .feature-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: var(--purple-dark);
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            color: var(--gray-900);
             font-weight: 700;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
         }
         
         .feature-card p {
-            color: #6b7280;
-            line-height: 1.7;
+            color: var(--gray-600);
+            line-height: 1.8;
             font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
         
         .feature-list {
             list-style: none;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
         
         .feature-list li {
             display: flex;
             align-items: center;
-            margin-bottom: 0.8rem;
-            color: #374151;
+            margin-bottom: 1rem;
+            color: var(--gray-700);
             font-weight: 500;
+            font-size: 1rem;
         }
         
         .feature-list li::before {
             content: '●';
-            color: var(--green);
-            margin-right: 12px;
-            font-size: 1.2rem;
+            color: var(--light-green);
+            margin-right: 16px;
+            font-size: 1.3rem;
+            font-weight: bold;
         }
         
         /* Pricing Section */
         .pricing {
-            padding: 120px 0;
-            background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
+            padding: 140px 0;
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--dark-blue) 100%);
             color: white;
+            position: relative;
+        }
+        
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+        }
+        
+        .pricing .container {
+            position: relative;
+            z-index: 1;
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 5rem;
         }
         
         .pricing-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(20px);
-            padding: 3rem 2rem;
-            border-radius: 20px;
+            padding: 3.5rem 2.5rem;
+            border-radius: 24px;
             text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
         }
@@ -394,91 +509,116 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--green), var(--purple-light));
+            background: linear-gradient(90deg, var(--light-green), var(--success-green));
         }
         
         .pricing-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
         }
         
         .pricing-card.featured {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             transform: scale(1.05);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid var(--light-green);
+            box-shadow: 0 20px 60px rgba(34, 197, 94, 0.2);
         }
         
         .pricing-card.featured::before {
             height: 6px;
-            background: linear-gradient(90deg, #fbbf24, var(--green));
+            background: linear-gradient(90deg, var(--orange), var(--light-green), var(--success-green));
+        }
+        
+        .plan-badge {
+            background: linear-gradient(135deg, var(--orange), #f97316);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: inline-block;
         }
         
         .plan-name {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            color: white;
         }
         
         .plan-price {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
             margin-bottom: 0.5rem;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #ffffff, var(--light-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .plan-period {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.8;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.8);
         }
         
         .plan-contracts {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
+            padding: 1.2rem;
+            border-radius: 16px;
+            margin-bottom: 2.5rem;
             font-weight: 600;
+            font-size: 1.1rem;
         }
         
         .plan-features {
             list-style: none;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
             text-align: left;
         }
         
         .plan-features li {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             font-weight: 500;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .plan-features li::before {
             content: '●';
-            color: var(--green);
-            margin-right: 12px;
-            font-size: 1.2rem;
+            color: var(--light-green);
+            margin-right: 16px;
+            font-size: 1.3rem;
             flex-shrink: 0;
+            font-weight: bold;
         }
         
         .plan-button {
-            background: linear-gradient(135deg, #ffffff, #f1f5f9);
-            color: var(--purple-dark);
-            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--light-green), var(--success-green));
+            color: white;
+            padding: 18px 36px;
             border: none;
-            border-radius: 50px;
+            border-radius: 60px;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
             width: 100%;
             font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
         }
         
         .plan-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
+            filter: brightness(1.1);
         }
         
         /* WhatsApp Button */
@@ -486,117 +626,133 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #25d366;
+            background: linear-gradient(135deg, #25d366, #128c7e);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
             text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             z-index: 1000;
-            animation: pulse 2s infinite;
+            animation: pulse 3s infinite;
         }
         
         .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+            transform: scale(1.15);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
         }
         
         @keyframes pulse {
             0% {
-                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
             }
             50% {
-                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7), 0 0 0 20px rgba(37, 211, 102, 0.1);
             }
             100% {
-                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
             }
         }
         
         /* Stats Section */
         .stats {
-            padding: 120px 0;
-            background: var(--gray-50);
+            padding: 140px 0;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 4rem;
+            margin-top: 4rem;
         }
         
         .stat-item {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(30, 64, 175, 0.05);
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(30, 64, 175, 0.1);
         }
         
         .stat-number {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 800;
-            color: var(--purple-medium);
+            background: linear-gradient(135deg, var(--light-blue), var(--light-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
         }
         
         .stat-label {
-            font-size: 1.2rem;
-            color: #6b7280;
+            font-size: 1.3rem;
+            color: var(--gray-600);
             font-weight: 600;
         }
         
         /* Footer */
         footer {
-            background: var(--purple-dark);
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--dark-blue) 100%);
             color: white;
-            padding: 3rem 0;
-            text-align: center;
+            padding: 4rem 0 2rem;
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
         
         .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
             font-weight: 700;
-            color: var(--purple-light);
+            color: var(--light-green);
+            font-family: 'Space Grotesk', sans-serif;
         }
         
         .footer-section p, .footer-section a {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            line-height: 1.8;
+            line-height: 2;
+            font-size: 1rem;
         }
         
         .footer-section a:hover {
-            color: white;
+            color: var(--light-green);
+            transition: color 0.3s ease;
         }
         
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 2rem;
-            opacity: 0.8;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .slide h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             
             .slide p {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
             .hero-buttons {
@@ -605,11 +761,12 @@
             }
             
             .section-title {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .features-grid, .pricing-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
             .nav-links {
@@ -618,20 +775,32 @@
             
             .pricing-card.featured {
                 transform: none;
+                scale: 1;
+            }
+            
+            .container {
+                padding: 0 16px;
             }
         }
         
         @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-            
             .feature-card, .pricing-card {
-                padding: 2rem 1.5rem;
+                padding: 2.5rem 1.5rem;
             }
             
             .plan-price {
+                font-size: 3rem;
+            }
+            
+            .slide h1 {
                 font-size: 2.5rem;
+            }
+            
+            .whatsapp-btn {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
@@ -652,13 +821,19 @@
 
     <!-- Hero Slider -->
     <section class="hero-slider">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        
         <div class="slide active">
             <div class="slide-content">
                 <h1>Sua Imobiliária agora fala com seus Leads!</h1>
-                <p>Sistema completo de gestão imobiliária com Inteligência Artificial. Gerencie propriedades, contratos, pagamentos e muito mais em uma plataforma moderna.</p>
+                <p>Revolucione sua gestão imobiliária com Inteligência Artificial. Automatize processos, qualifique leads e aumente suas vendas com a plataforma mais completa do mercado.</p>
                 <div class="hero-buttons">
-                    <a href="#pricing" class="btn-primary">Ver Planos</a>
-                    <a href="#features" class="btn-secondary">Conhecer Recursos</a>
+                    <a href="#pricing" class="btn-primary">📊 Ver Planos</a>
+                    <a href="#features" class="btn-secondary">🚀 Conhecer Recursos</a>
                 </div>
             </div>
         </div>
@@ -666,10 +841,10 @@
         <div class="slide">
             <div class="slide-content">
                 <h1>Leads Certos, na Hora Certa!</h1>
-                <p>Nossa IA qualifica leads automaticamente e direciona para o corretor ideal. Aumente suas vendas com inteligência artificial.</p>
+                <p>Nossa IA avançada qualifica leads automaticamente e distribui para a equipe ideal. Aumente sua taxa de conversão em até 300% com inteligência artificial.</p>
                 <div class="hero-buttons">
-                    <a href="#pricing" class="btn-primary">Começar Agora</a>
-                    <a href="https://wa.me/5511999999999" class="btn-secondary">Falar no WhatsApp</a>
+                    <a href="#pricing" class="btn-primary">💰 Começar Agora</a>
+                    <a href="https://wa.me/5511999999999" class="btn-secondary">💬 Falar no WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -677,10 +852,10 @@
         <div class="slide">
             <div class="slide-content">
                 <h1>Mais Lead, Mais Crescimento!</h1>
-                <p>Automatize seu funil de vendas e acompanhe cada lead do primeiro contato até o fechamento. Transforme visitantes em clientes.</p>
+                <p>Automatize seu funil de vendas do primeiro contato ao fechamento. Transforme visitantes em clientes e clientes em defensores da sua marca.</p>
                 <div class="hero-buttons">
-                    <a href="#pricing" class="btn-primary">Teste Grátis</a>
-                    <a href="#stats" class="btn-secondary">Ver Resultados</a>
+                    <a href="#pricing" class="btn-primary">🎯 Teste Grátis</a>
+                    <a href="#stats" class="btn-secondary">📈 Ver Resultados</a>
                 </div>
             </div>
         </div>
@@ -696,78 +871,84 @@
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">Recursos Poderosos</h2>
-            <p class="section-subtitle">Tudo que sua imobiliária precisa para crescer e se destacar no mercado</p>
+            <p class="section-subtitle">Tecnologia de ponta para revolucionar sua gestão imobiliária e potencializar seus resultados</p>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🏠</div>
-                    <h3>Gestão de Imóveis</h3>
-                    <p>Cadastre e gerencie todas as suas propriedades com facilidade</p>
+                    <h3>Gestão Completa de Imóveis</h3>
+                    <p>Plataforma completa para cadastrar, organizar e gerenciar todo seu portfólio imobiliário</p>
                     <ul class="feature-list">
                         <li>Cadastro completo de imóveis</li>
                         <li>Galeria de fotos ilimitada</li>
-                        <li>Geolocalização automática</li>
+                        <li>Geolocalização inteligente</li>
                         <li>Filtros avançados de busca</li>
+                        <li>Sincronização com portais</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🤝</div>
                     <h3>Contratos Inteligentes</h3>
-                    <p>Crie e gerencie contratos com templates profissionais</p>
+                    <p>Automatize a criação e gestão de contratos com templates profissionais e assinatura digital</p>
                     <ul class="feature-list">
                         <li>Templates personalizáveis</li>
-                        <li>Assinatura digital</li>
+                        <li>Assinatura digital certificada</li>
                         <li>Versionamento automático</li>
                         <li>Notificações de vencimento</li>
+                        <li>Histórico completo</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
                     <h3>Controle Financeiro</h3>
-                    <p>Acompanhe pagamentos e tenha relatórios completos</p>
+                    <p>Monitore receitas, despesas e comissões com relatórios detalhados e análises avançadas</p>
                     <ul class="feature-list">
                         <li>Controle de inadimplência</li>
-                        <li>Comissões automáticas</li>
-                        <li>Relatórios financeiros</li>
+                        <li>Cálculo automático de comissões</li>
+                        <li>Relatórios financeiros completos</li>
                         <li>Integração bancária</li>
+                        <li>Fluxo de caixa em tempo real</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3>Leads Inteligentes</h3>
-                    <p>IA para capturar e qualificar leads automaticamente</p>
+                    <h3>IA para Leads</h3>
+                    <p>Inteligência artificial que captura, qualifica e distribui leads automaticamente</p>
                     <ul class="feature-list">
-                        <li>Captura automática de leads</li>
+                        <li>Captura automática multicanal</li>
                         <li>Qualificação inteligente</li>
-                        <li>Distribuição automática</li>
+                        <li>Distribuição otimizada</li>
                         <li>Follow-up programado</li>
+                        <li>Análise de comportamento</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>Relatórios Avançados</h3>
-                    <p>Dashboards completos com métricas de performance</p>
+                    <h3>Analytics Avançado</h3>
+                    <p>Dashboards inteligentes com métricas de performance e insights acionáveis</p>
                     <ul class="feature-list">
                         <li>Dashboard em tempo real</li>
-                        <li>Métricas de vendas</li>
+                        <li>Métricas de conversão</li>
                         <li>Análise de performance</li>
-                        <li>Relatórios personalizados</li>
+                        <li>Relatórios customizados</li>
+                        <li>Previsões com IA</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3>Acesso Mobile</h3>
-                    <p>Gerencie sua imobiliária de qualquer lugar</p>
+                    <h3>Mobile & Cloud</h3>
+                    <p>Acesso total via dispositivos móveis com sincronização em nuvem</p>
                     <ul class="feature-list">
-                        <li>Interface responsiva</li>
-                        <li>App nativo em breve</li>
-                        <li>Sincronização em tempo real</li>
+                        <li>Interface 100% responsiva</li>
+                        <li>App nativo (em breve)</li>
+                        <li>Sincronização automática</li>
                         <li>Notificações push</li>
+                        <li>Modo offline</li>
                     </ul>
                 </div>
             </div>
@@ -778,74 +959,79 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Escolha seu Plano</h2>
-            <p class="section-subtitle">Planos flexíveis para imobiliárias de todos os tamanhos</p>
+            <p class="section-subtitle">Soluções flexíveis que crescem junto com seu negócio</p>
             
             <div class="pricing-grid">
                 <!-- Plano Econômico -->
                 <div class="pricing-card">
                     <h3 class="plan-name">Econômico</h3>
-                    <div class="plan-price">R$ 149<span style="font-size: 1.5rem;">,90</span></div>
+                    <div class="plan-price">R$ 149<span style="font-size: 2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
                     <div class="plan-contracts">Até 50 contratos ativos</div>
                     <ul class="plan-features">
                         <li>Gestão básica de imóveis</li>
                         <li>Contratos simples</li>
-                        <li>Relatórios básicos</li>
+                        <li>Relatórios essenciais</li>
                         <li>Suporte por email</li>
-                        <li>1 usuário</li>
+                        <li>1 usuário incluído</li>
+                        <li>Backup automático</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Econômico do G-PROP" class="plan-button">Contratar Plano</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Econômico do G-PROP" class="plan-button">Contratar Agora</a>
                 </div>
                 
                 <!-- Plano Essencial -->
                 <div class="pricing-card featured">
+                    <div class="plan-badge">🔥 Mais Popular</div>
                     <h3 class="plan-name">Essencial</h3>
-                    <div class="plan-price">R$ 179<span style="font-size: 1.5rem;">,90</span></div>
+                    <div class="plan-price">R$ 179<span style="font-size: 2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
                     <div class="plan-contracts">Até 100 contratos ativos</div>
                     <ul class="plan-features">
                         <li>Todas as funcionalidades do Econômico</li>
-                        <li>Leads inteligentes</li>
+                        <li>IA para qualificação de leads</li>
                         <li>Assinatura digital</li>
                         <li>Relatórios avançados</li>
-                        <li>3 usuários</li>
+                        <li>3 usuários incluídos</li>
                         <li>Suporte prioritário</li>
+                        <li>Integrações básicas</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Essencial do G-PROP" class="plan-button">Contratar Plano</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Essencial do G-PROP" class="plan-button">Contratar Agora</a>
                 </div>
                 
                 <!-- Plano Enterprise -->
                 <div class="pricing-card">
                     <h3 class="plan-name">Enterprise</h3>
-                    <div class="plan-price">R$ 199<span style="font-size: 1.5rem;">,90</span></div>
+                    <div class="plan-price">R$ 199<span style="font-size: 2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
                     <div class="plan-contracts">Até 150 contratos ativos</div>
                     <ul class="plan-features">
                         <li>Todas as funcionalidades do Essencial</li>
                         <li>IA avançada para leads</li>
-                        <li>Integração bancária</li>
-                        <li>Customizações</li>
-                        <li>5 usuários</li>
+                        <li>Integração bancária completa</li>
+                        <li>Customizações avançadas</li>
+                        <li>5 usuários incluídos</li>
                         <li>Suporte 24/7</li>
+                        <li>API completa</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Enterprise do G-PROP" class="plan-button">Contratar Plano</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Enterprise do G-PROP" class="plan-button">Contratar Agora</a>
                 </div>
                 
                 <!-- Plano Total Turbo -->
                 <div class="pricing-card">
                     <h3 class="plan-name">Total Turbo</h3>
-                    <div class="plan-price">R$ 229<span style="font-size: 1.5rem;">,90</span></div>
+                    <div class="plan-price">R$ 229<span style="font-size: 2rem;">,90</span></div>
                     <div class="plan-period">/mês</div>
                     <div class="plan-contracts">Até 300 contratos ativos</div>
                     <ul class="plan-features">
                         <li>Todas as funcionalidades do Enterprise</li>
-                        <li>Automação completa</li>
+                        <li>Automação completa de processos</li>
                         <li>API personalizada</li>
                         <li>Relatórios executivos</li>
                         <li>Usuários ilimitados</li>
                         <li>Gerente de conta dedicado</li>
+                        <li>Treinamento personalizado</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Total Turbo do G-PROP" class="plan-button">Contratar Plano</a>
+                    <a href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Plano Total Turbo do G-PROP" class="plan-button">Contratar Agora</a>
                 </div>
             </div>
         </div>
@@ -854,13 +1040,13 @@
     <!-- Stats Section -->
     <section class="stats" id="stats">
         <div class="container">
-            <h2 class="section-title">Números que Impressionam</h2>
-            <p class="section-subtitle">Resultados reais de imobiliárias que confiam no G-PROP</p>
+            <h2 class="section-title">Resultados Comprovados</h2>
+            <p class="section-subtitle">Números que demonstram o impacto do G-PROP no crescimento das imobiliárias</p>
             
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-number">500+</div>
-                    <div class="stat-label">Imobiliárias Atendidas</div>
+                    <div class="stat-label">Imobiliárias Transformadas</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">50k+</div>
@@ -871,8 +1057,8 @@
                     <div class="stat-label">Satisfação dos Clientes</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Suporte Disponível</div>
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Aumento Médio em Vendas</div>
                 </div>
             </div>
         </div>
@@ -884,35 +1070,37 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>G-PROP</h3>
-                    <p>Sistema completo de gestão imobiliária com Inteligência Artificial. Sua imobiliária agora fala com seus leads!</p>
+                    <p>A plataforma de gestão imobiliária mais completa do Brasil. Transforme sua imobiliária com inteligência artificial e tecnologia de ponta.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <p>WhatsApp: (11) 99999-9999</p>
-                    <p>Email: contato@gprop.com.br</p>
-                    <p>Site: www.gprop.com.br</p>
+                    <p>📱 WhatsApp: (11) 99999-9999</p>
+                    <p>✉️ Email: contato@gprop.com.br</p>
+                    <p>🌐 Site: www.gprop.com.br</p>
                 </div>
                 <div class="footer-section">
                     <h3>Links Úteis</h3>
                     <p><a href="#features">Recursos</a></p>
-                    <p><a href="#pricing">Planos</a></p>
+                    <p><a href="#pricing">Planos e Preços</a></p>
                     <p><a href="https://app.gprop.com.br">Acessar Sistema</a></p>
+                    <p><a href="#stats">Casos de Sucesso</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Suporte</h3>
-                    <p><a href="https://wa.me/5511999999999">Chat WhatsApp</a></p>
-                    <p><a href="mailto:suporte@gprop.com.br">Email Suporte</a></p>
-                    <p><a href="#pricing">Central de Ajuda</a></p>
+                    <p><a href="https://wa.me/5511999999999">💬 Chat WhatsApp</a></p>
+                    <p><a href="mailto:suporte@gprop.com.br">📧 Suporte Técnico</a></p>
+                    <p><a href="#pricing">📚 Central de Ajuda</a></p>
+                    <p><a href="#features">🎥 Tutoriais</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 G-PROP. Todos os direitos reservados. | Gestão Imobiliária Inteligente</p>
+                <p>&copy; 2025 G-PROP. Todos os direitos reservados. | Gestão Imobiliária Inteligente com IA</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o G-PROP" class="whatsapp-btn" title="Falar no WhatsApp">
+    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de conhecer melhor o G-PROP e ver como pode transformar minha imobiliária" class="whatsapp-btn" title="Falar no WhatsApp">
         💬
     </a>
 
@@ -942,7 +1130,7 @@
         }
         
         // Auto slide
-        setInterval(nextSlide, 5000);
+        setInterval(nextSlide, 6000);
         
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -962,10 +1150,35 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(76, 29, 149, 0.98)';
+                header.style.background = 'rgba(30, 64, 175, 0.98)';
+                header.style.boxShadow = '0 12px 40px rgba(30, 64, 175, 0.3)';
             } else {
-                header.style.background = 'rgba(76, 29, 149, 0.95)';
+                header.style.background = 'rgba(30, 64, 175, 0.96)';
+                header.style.boxShadow = '0 8px 32px rgba(30, 64, 175, 0.2)';
             }
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe feature cards
+        document.querySelectorAll('.feature-card, .pricing-card, .stat-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
