@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-PROP - O Futuro da Gestão Imobiliária</title>
-    <meta name="description" content="Plataforma de IA que transforma imobiliárias. Mais leads, mais vendas, mais lucro.">
+    <title>G-PROP - Plataforma IA Avançada</title>
+    <meta name="description" content="Tecnologia de IA que revoluciona o mercado imobiliário. Resultados extraordinários garantidos.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -17,112 +17,186 @@
         }
         
         :root {
-            --primary-purple: #8b5cf6;
-            --dark-purple: #7c3aed;
-            --light-purple: #a78bfa;
-            --neon-purple: #c084fc;
-            --accent-purple: #ddd6fe;
-            --black: #000000;
-            --dark-gray: #111111;
-            --medium-gray: #1a1a1a;
-            --light-gray: #2a2a2a;
-            --white: #ffffff;
-            --gray-text: #a1a1aa;
-            --border-gray: #27272a;
+            --neon-purple: #bf00ff;
+            --electric-purple: #8a2be2;
+            --deep-purple: #6a0dad;
+            --cyber-purple: #9d4edd;
+            --glow-purple: #c77dff;
+            --ultra-black: #000000;
+            --void-black: #0a0a0a;
+            --deep-black: #050505;
+            --carbon-black: #111111;
+            --pure-white: #ffffff;
+            --silver: #c0c0c0;
+            --chrome: #e8e8e8;
+            --glass-border: rgba(191, 0, 255, 0.3);
         }
         
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--black);
-            color: var(--white);
-            line-height: 1.6;
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--ultra-black);
+            color: var(--pure-white);
+            line-height: 1.5;
             overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(191, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(106, 13, 173, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Header */
+        /* Header Ultra Dark */
         header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-gray);
+            border-bottom: 1px solid var(--glass-border);
             transition: all 0.3s ease;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+            box-shadow: 0 0 20px var(--neon-purple);
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 25px 0;
         }
         
         .logo {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
-            text-shadow: 0 0 20px var(--primary-purple);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--gray-text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--pure-white);
+            text-shadow: 
+                0 0 10px var(--neon-purple),
+                0 0 20px var(--neon-purple),
+                0 0 30px var(--neon-purple);
+            letter-spacing: 3px;
             position: relative;
         }
         
-        .nav-links a:hover {
-            color: var(--white);
-        }
-        
-        .nav-links a::after {
+        .logo::after {
             content: '';
             position: absolute;
             bottom: -5px;
             left: 0;
-            width: 0;
+            right: 0;
             height: 2px;
-            background: var(--primary-purple);
-            transition: width 0.3s ease;
+            background: linear-gradient(90deg, var(--neon-purple), var(--electric-purple));
+            box-shadow: 0 0 15px var(--neon-purple);
         }
         
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--silver);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, transparent, rgba(191, 0, 255, 0.1), transparent);
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .nav-links a:hover::before {
+            opacity: 1;
+        }
+        
+        .nav-links a:hover {
+            color: var(--pure-white);
+            text-shadow: 0 0 15px var(--neon-purple);
         }
         
         .nav-cta {
-            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
-            color: var(--white);
-            padding: 12px 24px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
+            color: var(--pure-white);
+            padding: 15px 30px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 
+                0 0 20px rgba(191, 0, 255, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .nav-cta:hover::before {
+            left: 100%;
         }
         
         .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 0 30px rgba(191, 0, 255, 0.8),
+                0 10px 30px rgba(191, 0, 255, 0.3);
         }
         
-        /* Hero Section com Slider */
+        /* Hero Ultra Dark com Reflexos */
         .hero {
             position: relative;
             height: 100vh;
@@ -131,169 +205,239 @@
             overflow: hidden;
         }
         
-        .hero-slider {
+        .hero-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(191, 0, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+                var(--ultra-black);
         }
         
-        .slide {
+        .hero-grid {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 70%);
+            background-image: 
+                linear-gradient(rgba(191, 0, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(191, 0, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            animation: gridPulse 4s ease-in-out infinite alternate;
         }
         
-        .slide.active {
-            opacity: 1;
-        }
-        
-        .slide-1 {
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.2) 0%, transparent 50%),
-                var(--black);
-        }
-        
-        .slide-2 {
-            background: 
-                radial-gradient(circle at 60% 30%, rgba(167, 139, 250, 0.25) 0%, transparent 50%),
-                radial-gradient(circle at 40% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-                var(--black);
-        }
-        
-        .slide-3 {
-            background: 
-                radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(192, 132, 252, 0.2) 0%, transparent 50%),
-                var(--black);
+        @keyframes gridPulse {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.4; }
         }
         
         .hero-content {
             position: relative;
             z-index: 10;
             text-align: center;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .hero-badge {
             display: inline-block;
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            padding: 8px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--glass-border);
+            padding: 12px 30px;
             border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(20px);
+            box-shadow: 
+                0 0 30px rgba(191, 0, 255, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(191, 0, 255, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
         
         .hero-title {
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(4rem, 10vw, 8rem);
             font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--white) 0%, var(--light-purple) 50%, var(--neon-purple) 100%);
+            line-height: 1;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, 
+                var(--pure-white) 0%, 
+                var(--glow-purple) 30%, 
+                var(--neon-purple) 60%, 
+                var(--pure-white) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+            text-shadow: 
+                0 0 50px rgba(191, 0, 255, 0.8),
+                0 0 100px rgba(191, 0, 255, 0.4);
+            letter-spacing: 3px;
+            position: relative;
+        }
+        
+        .hero-title::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(191, 0, 255, 0.1), transparent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            z-index: -1;
+            transform: translateY(5px);
+            filter: blur(2px);
+            opacity: 0.5;
         }
         
         .hero-subtitle {
-            font-size: 1.4rem;
-            color: var(--gray-text);
-            margin-bottom: 3rem;
-            font-weight: 300;
-            max-width: 700px;
+            font-size: 1.8rem;
+            color: var(--chrome);
+            margin-bottom: 4rem;
+            font-weight: 400;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
+            line-height: 1.4;
         }
         
         .hero-cta {
             display: inline-flex;
             align-items: center;
-            gap: 15px;
-            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
-            color: var(--white);
-            padding: 20px 40px;
-            border-radius: 12px;
+            gap: 20px;
+            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple), var(--deep-purple));
+            color: var(--pure-white);
+            padding: 25px 50px;
+            border-radius: 15px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
-            margin-bottom: 3rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 
+                0 0 40px rgba(191, 0, 255, 0.6),
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 5rem;
+        }
+        
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .hero-cta:hover::before {
+            left: 100%;
         }
         
         .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 50px rgba(139, 92, 246, 0.8);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 
+                0 0 60px rgba(191, 0, 255, 1),
+                0 30px 60px rgba(0, 0, 0, 0.7);
         }
         
-        .hero-metrics {
+        .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 80px;
-            margin-top: 4rem;
+            gap: 100px;
+            margin-top: 5rem;
         }
         
-        .metric {
+        .stat-card {
             text-align: center;
-        }
-        
-        .metric-number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--white);
-            display: block;
-            text-shadow: 0 0 20px var(--primary-purple);
-        }
-        
-        .metric-label {
-            font-size: 0.9rem;
-            color: var(--gray-text);
-            font-weight: 400;
-        }
-        
-        /* Slide Indicators */
-        .slide-indicators {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            z-index: 10;
-        }
-        
-        .indicator {
-            width: 40px;
-            height: 4px;
-            background: rgba(139, 92, 246, 0.3);
-            border-radius: 2px;
-            cursor: pointer;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(20px);
+            box-shadow: 
+                0 0 30px rgba(191, 0, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
-        .indicator.active {
-            background: var(--primary-purple);
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.8);
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-purple), var(--electric-purple));
+            box-shadow: 0 0 20px var(--neon-purple);
         }
         
-        /* Features Section */
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 0 50px rgba(191, 0, 255, 0.4),
+                0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+        
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--pure-white);
+            display: block;
+            text-shadow: 
+                0 0 20px var(--neon-purple),
+                0 0 40px var(--neon-purple);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--chrome);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Features Ultra Dark */
         .features {
-            padding: 120px 0;
-            background: var(--dark-gray);
+            padding: 150px 0;
+            background: var(--void-black);
             position: relative;
         }
         
@@ -303,59 +447,70 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+            box-shadow: 0 0 30px var(--neon-purple);
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
         
         .section-badge {
             display: inline-block;
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            color: var(--light-purple);
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid var(--glass-border);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--glow-purple);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 
+                0 0 25px rgba(191, 0, 255, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
         
         .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--white), var(--light-purple));
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--pure-white), var(--glow-purple), var(--neon-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 0 50px rgba(191, 0, 255, 0.5);
+            letter-spacing: 2px;
         }
         
         .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--gray-text);
-            max-width: 600px;
+            font-size: 1.4rem;
+            color: var(--chrome);
+            max-width: 700px;
             margin: 0 auto;
-            font-weight: 300;
+            font-weight: 400;
+            text-shadow: 0 0 15px rgba(191, 0, 255, 0.2);
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 50px;
         }
         
         .feature-card {
-            background: var(--medium-gray);
-            border: 1px solid var(--border-gray);
-            padding: 40px;
-            border-radius: 16px;
-            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--glass-border);
+            padding: 50px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(20px);
         }
         
         .feature-card::before {
@@ -364,42 +519,67 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary-purple), var(--dark-purple));
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-purple), var(--electric-purple), var(--deep-purple));
             transform: scaleX(0);
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
+            box-shadow: 0 0 20px var(--neon-purple);
+        }
+        
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(180deg, transparent, rgba(191, 0, 255, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
         
         .feature-card:hover::before {
             transform: scaleX(1);
         }
         
+        .feature-card:hover::after {
+            opacity: 1;
+        }
+        
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-purple);
-            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+            transform: translateY(-10px);
+            border-color: var(--neon-purple);
+            box-shadow: 
+                0 0 50px rgba(191, 0, 255, 0.3),
+                0 30px 60px rgba(0, 0, 0, 0.7);
         }
         
         .feature-number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1rem;
-            color: var(--primary-purple);
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            color: var(--neon-purple);
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px var(--neon-purple);
+            letter-spacing: 2px;
         }
         
         .feature-title {
-            font-size: 1.5rem;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--white);
+            margin-bottom: 20px;
+            color: var(--pure-white);
+            text-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
+            letter-spacing: 1px;
         }
         
         .feature-desc {
-            color: var(--gray-text);
+            color: var(--chrome);
             line-height: 1.6;
-            margin-bottom: 25px;
-            font-weight: 300;
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-size: 1.1rem;
         }
         
         .feature-list {
@@ -409,25 +589,34 @@
         .feature-list li {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-            color: var(--gray-text);
-            font-weight: 400;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: var(--silver);
+            font-weight: 500;
+            font-size: 1rem;
         }
         
         .feature-list li::before {
             content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--primary-purple);
+            width: 8px;
+            height: 8px;
+            background: var(--neon-purple);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--primary-purple);
+            box-shadow: 
+                0 0 15px var(--neon-purple),
+                0 0 30px var(--neon-purple);
+            animation: pulse 2s infinite;
         }
         
-        /* Pricing Section */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+        
+        /* Pricing Ultra Premium */
         .pricing {
-            padding: 120px 0;
-            background: var(--black);
+            padding: 150px 0;
+            background: var(--deep-black);
             position: relative;
         }
         
@@ -437,139 +626,197 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+            box-shadow: 0 0 30px var(--neon-purple);
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
         }
         
         .pricing-card {
-            background: var(--medium-gray);
-            border: 1px solid var(--border-gray);
-            padding: 40px;
-            border-radius: 16px;
+            background: rgba(0, 0, 0, 0.95);
+            border: 2px solid var(--glass-border);
+            padding: 50px;
+            border-radius: 25px;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(20px);
         }
         
         .pricing-card::before {
             content: '';
             position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            bottom: -1px;
-            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
-            border-radius: 16px;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple), var(--deep-purple));
+            border-radius: 25px;
             z-index: -1;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
+        }
+        
+        .pricing-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(191, 0, 255, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.4s ease;
         }
         
         .pricing-card:hover::before {
             opacity: 1;
         }
         
+        .pricing-card:hover::after {
+            width: 200%;
+            height: 200%;
+        }
+        
         .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(139, 92, 246, 0.3);
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 
+                0 0 60px rgba(191, 0, 255, 0.4),
+                0 40px 80px rgba(0, 0, 0, 0.8);
         }
         
         .pricing-card.featured {
-            border-color: var(--primary-purple);
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+            border-color: var(--neon-purple);
+            box-shadow: 0 0 40px rgba(191, 0, 255, 0.4);
         }
         
         .plan-badge {
             position: absolute;
-            top: -12px;
+            top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
-            color: var(--white);
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
+            color: var(--pure-white);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 25px rgba(191, 0, 255, 0.6);
         }
         
         .plan-name {
-            font-size: 1.5rem;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--white);
+            margin-bottom: 15px;
+            color: var(--pure-white);
+            text-shadow: 0 0 20px rgba(191, 0, 255, 0.3);
+            letter-spacing: 2px;
         }
         
         .plan-price {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: var(--white);
-            text-shadow: 0 0 20px var(--primary-purple);
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+            text-shadow: 
+                0 0 30px var(--neon-purple),
+                0 0 60px var(--neon-purple);
         }
         
         .plan-period {
-            color: var(--gray-text);
-            margin-bottom: 30px;
-            font-weight: 300;
+            color: var(--chrome);
+            margin-bottom: 40px;
+            font-weight: 500;
+            font-size: 1.1rem;
         }
         
         .plan-features {
             list-style: none;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             text-align: left;
         }
         
         .plan-features li {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            color: var(--gray-text);
-            font-weight: 400;
+            gap: 15px;
+            margin-bottom: 18px;
+            color: var(--silver);
+            font-weight: 500;
+            font-size: 1.1rem;
         }
         
         .plan-features li::before {
             content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--primary-purple);
+            width: 8px;
+            height: 8px;
+            background: var(--neon-purple);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--primary-purple);
+            box-shadow: 
+                0 0 15px var(--neon-purple),
+                0 0 30px var(--neon-purple);
         }
         
         .plan-button {
-            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
-            color: var(--white);
-            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
+            color: var(--pure-white);
+            padding: 20px 40px;
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
             text-decoration: none;
             display: inline-block;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             width: 100%;
-            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 
+                0 0 30px rgba(191, 0, 255, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .plan-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .plan-button:hover::before {
+            left: 100%;
         }
         
         .plan-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 0 50px rgba(191, 0, 255, 0.8),
+                0 15px 40px rgba(0, 0, 0, 0.6);
         }
         
-        /* CTA Section */
+        /* CTA Ultra Dark */
         .cta {
-            padding: 120px 0;
-            background: var(--dark-gray);
+            padding: 150px 0;
+            background: var(--carbon-black);
             text-align: center;
             position: relative;
         }
@@ -580,142 +827,217 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+            box-shadow: 0 0 30px var(--neon-purple);
         }
         
         .cta-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+            position: relative;
         }
         
         .cta-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--white), var(--light-purple));
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--pure-white), var(--glow-purple), var(--neon-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 0 60px rgba(191, 0, 255, 0.6);
+            letter-spacing: 2px;
         }
         
         .cta-subtitle {
-            font-size: 1.2rem;
-            color: var(--gray-text);
-            margin-bottom: 40px;
-            font-weight: 300;
+            font-size: 1.4rem;
+            color: var(--chrome);
+            margin-bottom: 50px;
+            font-weight: 400;
+            line-height: 1.5;
         }
         
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
             flex-wrap: wrap;
         }
         
         .cta-button {
-            padding: 18px 40px;
-            border-radius: 8px;
-            font-weight: 600;
+            padding: 25px 50px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
             text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
         }
         
         .cta-button.primary {
-            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
-            color: var(--white);
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
+            color: var(--pure-white);
+            box-shadow: 
+                0 0 40px rgba(191, 0, 255, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
         
         .cta-button.secondary {
             background: transparent;
-            color: var(--white);
-            border: 2px solid var(--primary-purple);
+            color: var(--pure-white);
+            border: 3px solid var(--neon-purple);
+            box-shadow: 0 0 30px rgba(191, 0, 255, 0.3);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px) scale(1.02);
         }
         
         .cta-button.primary:hover {
-            box-shadow: 0 0 50px rgba(139, 92, 246, 0.6);
+            box-shadow: 
+                0 0 60px rgba(191, 0, 255, 0.8),
+                0 25px 50px rgba(0, 0, 0, 0.7);
         }
         
         .cta-button.secondary:hover {
-            background: var(--primary-purple);
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+            background: var(--neon-purple);
+            box-shadow: 
+                0 0 50px rgba(191, 0, 255, 0.6),
+                0 20px 40px rgba(0, 0, 0, 0.6);
         }
         
-        /* Footer */
+        /* Footer Ultra Dark */
         footer {
-            background: var(--black);
-            padding: 80px 0 40px;
-            border-top: 1px solid var(--border-gray);
+            background: var(--ultra-black);
+            padding: 100px 0 50px;
+            border-top: 2px solid var(--glass-border);
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+            box-shadow: 0 0 30px var(--neon-purple);
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
         }
         
         .footer-section h3 {
+            font-family: 'Orbitron', monospace;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--pure-white);
+            text-shadow: 0 0 15px rgba(191, 0, 255, 0.3);
+            letter-spacing: 1px;
         }
         
         .footer-section p, .footer-section a {
-            color: var(--gray-text);
+            color: var(--silver);
             text-decoration: none;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: block;
-            font-weight: 300;
-            transition: color 0.3s ease;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: all 0.3s ease;
         }
         
         .footer-section a:hover {
-            color: var(--white);
+            color: var(--pure-white);
+            text-shadow: 0 0 10px rgba(191, 0, 255, 0.5);
+            transform: translateX(5px);
         }
         
         .footer-bottom {
-            border-top: 1px solid var(--border-gray);
-            padding-top: 30px;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 40px;
             text-align: center;
-            color: var(--gray-text);
-            font-weight: 300;
+            color: var(--silver);
+            font-weight: 400;
         }
         
         /* Floating Buttons */
         .floating-buttons {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 40px;
+            right: 40px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
             z-index: 1000;
         }
         
         .floating-btn {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: var(--white);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            border: 2px solid var(--primary-purple);
+            color: var(--pure-white);
+            font-size: 1.8rem;
+            transition: all 0.4s ease;
+            border: 2px solid var(--neon-purple);
+            box-shadow: 
+                0 0 30px rgba(191, 0, 255, 0.4),
+                0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floating-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-btn:hover::before {
+            transform: scale(1);
         }
         
         .floating-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 
+                0 0 50px rgba(191, 0, 255, 0.8),
+                0 20px 40px rgba(0, 0, 0, 0.7);
         }
         
         .whatsapp-btn {
@@ -724,7 +1046,7 @@
         }
         
         .chat-btn {
-            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            background: linear-gradient(135deg, var(--neon-purple), var(--electric-purple));
         }
         
         /* Responsive */
@@ -733,9 +1055,9 @@
                 display: none;
             }
             
-            .hero-metrics {
+            .hero-stats {
                 flex-direction: column;
-                gap: 30px;
+                gap: 40px;
             }
             
             .features-grid {
@@ -750,17 +1072,13 @@
                 flex-direction: column;
                 align-items: center;
             }
-            
-            .slide-indicators {
-                display: none;
-            }
         }
         
         /* Scroll Animations */
         .scroll-animate {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+            transform: translateY(50px);
+            transition: all 1s ease;
         }
         
         .scroll-animate.visible {
@@ -776,283 +1094,250 @@
             <nav>
                 <div class="logo">G-PROP</div>
                 <ul class="nav-links">
-                    <li><a href="#recursos">Recursos</a></li>
-                    <li><a href="#planos">Planos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#recursos">TECNOLOGIA</a></li>
+                    <li><a href="#planos">PLANOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
                 </ul>
-                <a href="https://app.gprop.com.br" class="nav-cta">Entrar</a>
+                <a href="https://app.gprop.com.br" class="nav-cta">ENTRAR</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section com Slider -->
+    <!-- Hero Section Ultra Dark -->
     <section class="hero">
-        <div class="hero-slider">
-            <div class="slide slide-1 active"></div>
-            <div class="slide slide-2"></div>
-            <div class="slide slide-3"></div>
-        </div>
+        <div class="hero-background"></div>
+        <div class="hero-grid"></div>
         
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    IA AVANÇADA • RESULTADOS REAIS
+                    TECNOLOGIA IA AVANÇADA • RESULTADOS EXTRAORDINÁRIOS
                 </div>
-                <h1 class="hero-title">
-                    O FUTURO DA<br>
-                    GESTÃO IMOBILIÁRIA
+                <h1 class="hero-title" data-text="REVOLUÇÃO IMOBILIÁRIA">
+                    REVOLUÇÃO<br>
+                    IMOBILIÁRIA
                 </h1>
                 <p class="hero-subtitle">
-                    Plataforma de inteligência artificial que revoluciona como imobiliárias 
-                    captam leads, convertem vendas e maximizam lucros.
+                    Plataforma de inteligência artificial mais avançada do Brasil para o mercado imobiliário. 
+                    Transforme dados em vendas, leads em lucros extraordinários.
                 </p>
                 <a href="#planos" class="hero-cta">
-                    COMEÇAR TRANSFORMAÇÃO
+                    INICIAR DOMÍNIO
                 </a>
                 
-                <div class="hero-metrics">
-                    <div class="metric">
-                        <span class="metric-number">500+</span>
-                        <span class="metric-label">Imobiliárias Transformadas</span>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Imobiliárias Elite</span>
                     </div>
-                    <div class="metric">
-                        <span class="metric-number">300%</span>
-                        <span class="metric-label">Aumento em Vendas</span>
+                    <div class="stat-card">
+                        <span class="stat-number">500%</span>
+                        <span class="stat-label">ROI Garantido</span>
                     </div>
-                    <div class="metric">
-                        <span class="metric-number">50K+</span>
-                        <span class="metric-label">Leads Convertidos</span>
+                    <div class="stat-card">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Vendas Fechadas</span>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="slide-indicators">
-            <div class="indicator active" onclick="currentSlide(1)"></div>
-            <div class="indicator" onclick="currentSlide(2)"></div>
-            <div class="indicator" onclick="currentSlide(3)"></div>
-        </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Ultra Tech -->
     <section class="features" id="recursos">
         <div class="container">
             <div class="section-header scroll-animate">
-                <div class="section-badge">TECNOLOGIA AVANÇADA</div>
-                <h2 class="section-title">RECURSOS DE IA</h2>
+                <div class="section-badge">TECNOLOGIA SUPREMA</div>
+                <h2 class="section-title">ARSENAL IA</h2>
                 <p class="section-subtitle">
-                    Ferramentas inteligentes que transformam dados em resultados
+                    Ferramentas de inteligência artificial que dominam o mercado imobiliário
                 </p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card scroll-animate">
-                    <div class="feature-number">01</div>
-                    <h3 class="feature-title">CONVERSÃO INTELIGENTE</h3>
+                    <div class="feature-number">// 01</div>
+                    <h3 class="feature-title">NEURAL CONVERSION</h3>
                     <p class="feature-desc">
-                        Sistema de IA que analisa comportamento de leads e otimiza automaticamente 
-                        suas campanhas para máxima conversão.
+                        Rede neural proprietária que analisa comportamento de leads em tempo real, 
+                        prevê intenções de compra e otimiza conversões automaticamente.
                     </p>
                     <ul class="feature-list">
-                        <li>Análise preditiva de comportamento</li>
+                        <li>Machine Learning preditivo avançado</li>
+                        <li>Análise comportamental em tempo real</li>
                         <li>Otimização automática de campanhas</li>
-                        <li>Segmentação inteligente de público</li>
-                        <li>ROI 300% superior à concorrência</li>
+                        <li>ROI 500% superior ao mercado</li>
+                        <li>Previsão de vendas com 95% precisão</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card scroll-animate">
-                    <div class="feature-number">02</div>
-                    <h3 class="feature-title">AUTOMAÇÃO TOTAL</h3>
+                    <div class="feature-number">// 02</div>
+                    <h3 class="feature-title">QUANTUM AUTOMATION</h3>
                     <p class="feature-desc">
-                        Workflows inteligentes que automatizam todo seu processo comercial, 
-                        desde o primeiro contato até o fechamento da venda.
+                        Sistema de automação quântica que processa milhares de interações 
+                        simultâneas, qualifica leads e fecha vendas 24/7.
                     </p>
                     <ul class="feature-list">
-                        <li>Follow-up automático personalizado</li>
-                        <li>Agendamento inteligente de visitas</li>
-                        <li>Contratos digitais integrados</li>
-                        <li>Pipeline de vendas otimizado</li>
+                        <li>Processamento quântico de dados</li>
+                        <li>Qualificação instantânea de leads</li>
+                        <li>Fechamento automatizado de vendas</li>
+                        <li>Integração total com ecossistema</li>
+                        <li>Workflows inteligentes adaptativos</li>
                     </ul>
                 </div>
                 
                 <div class="feature-card scroll-animate">
-                    <div class="feature-number">03</div>
-                    <h3 class="feature-title">ANALYTICS PROFISSIONAL</h3>
+                    <div class="feature-number">// 03</div>
+                    <h3 class="feature-title">CYBER ANALYTICS</h3>
                     <p class="feature-desc">
-                        Dashboards em tempo real com métricas avançadas que revelam 
-                        exatamente onde investir para crescer exponencialmente.
+                        Dashboard cyberpunk com métricas em tempo real, análise preditiva 
+                        e insights estratégicos que revelam oportunidades ocultas.
                     </p>
                     <ul class="feature-list">
-                        <li>Métricas em tempo real</li>
+                        <li>Interface holográfica avançada</li>
+                        <li>Métricas multidimensionais</li>
                         <li>Previsões de mercado com IA</li>
-                        <li>Relatórios de performance detalhados</li>
-                        <li>Insights estratégicos personalizados</li>
+                        <li>Alertas inteligentes personalizados</li>
+                        <li>Análise competitiva automatizada</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing Ultra Premium -->
     <section class="pricing" id="planos">
         <div class="container">
             <div class="section-header scroll-animate">
-                <div class="section-badge">PLANOS PREMIUM</div>
-                <h2 class="section-title">ESCOLHA SEU CRESCIMENTO</h2>
+                <div class="section-badge">PLANOS SUPREMOS</div>
+                <h2 class="section-title">ESCOLHA SEU PODER</h2>
                 <p class="section-subtitle">
-                    Soluções escaláveis para imobiliárias de todos os tamanhos
+                    Soluções premium para imobiliárias que querem dominar o mercado
                 </p>
             </div>
             
             <div class="pricing-grid">
                 <div class="pricing-card scroll-animate">
-                    <h3 class="plan-name">STARTER</h3>
-                    <div class="plan-price">149</div>
+                    <h3 class="plan-name">NEURAL</h3>
+                    <div class="plan-price">299</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Até 50 contratos mensais</li>
-                        <li>IA básica para qualificação</li>
-                        <li>CRM essencial integrado</li>
-                        <li>Suporte técnico por email</li>
-                        <li>Dashboard de métricas básico</li>
-                        <li>1 usuário incluído</li>
+                        <li>Até 100 contratos premium</li>
+                        <li>IA Neural básica integrada</li>
+                        <li>Dashboard cyberpunk essencial</li>
+                        <li>Automação quântica limitada</li>
+                        <li>Suporte técnico especializado</li>
+                        <li>3 usuários simultâneos</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero o plano STARTER do G-PROP!" class="plan-button">
-                        COMEÇAR AGORA
+                    <a href="https://wa.me/5511999999999?text=Quero dominar com o plano NEURAL!" class="plan-button">
+                        ATIVAR PODER
                     </a>
                 </div>
                 
                 <div class="pricing-card featured scroll-animate">
-                    <div class="plan-badge">MAIS POPULAR</div>
-                    <h3 class="plan-name">PROFESSIONAL</h3>
-                    <div class="plan-price">299</div>
+                    <div class="plan-badge">SUPREMO</div>
+                    <h3 class="plan-name">QUANTUM</h3>
+                    <div class="plan-price">599</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Até 200 contratos mensais</li>
-                        <li>IA avançada + Analytics completo</li>
-                        <li>Automação total de workflows</li>
-                        <li>Suporte prioritário 24/7</li>
-                        <li>Integração com bancos e cartórios</li>
-                        <li>Até 5 usuários incluídos</li>
+                        <li>Até 500 contratos elite</li>
+                        <li>IA Quantum completa + Analytics</li>
+                        <li>Automação total cyberpunk</li>
+                        <li>Previsões com 95% precisão</li>
+                        <li>Suporte prioritário 24/7/365</li>
+                        <li>10 usuários simultâneos</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero o plano PROFESSIONAL do G-PROP!" class="plan-button">
-                        COMEÇAR AGORA
+                    <a href="https://wa.me/5511999999999?text=Quero revolucionar com QUANTUM!" class="plan-button">
+                        ATIVAR PODER
                     </a>
                 </div>
                 
                 <div class="pricing-card scroll-animate">
-                    <h3 class="plan-name">ENTERPRISE</h3>
-                    <div class="plan-price">599</div>
+                    <h3 class="plan-name">CYBER</h3>
+                    <div class="plan-price">999</div>
                     <div class="plan-period">por mês</div>
                     <ul class="plan-features">
-                        <li>Contratos ilimitados</li>
-                        <li>IA personalizada para seu negócio</li>
+                        <li>Contratos ilimitados premium</li>
+                        <li>IA personalizada exclusiva</li>
                         <li>API dedicada + customizações</li>
                         <li>Gerente de sucesso dedicado</li>
-                        <li>White-label disponível</li>
+                        <li>White-label supremo disponível</li>
                         <li>Usuários ilimitados</li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Quero o plano ENTERPRISE do G-PROP!" class="plan-button">
-                        COMEÇAR AGORA
+                    <a href="https://wa.me/5511999999999?text=Quero dominar com CYBER supremo!" class="plan-button">
+                        ATIVAR PODER
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA Ultra Power -->
     <section class="cta" id="contato">
         <div class="container">
             <div class="cta-content scroll-animate">
                 <h2 class="cta-title">PRONTO PARA DOMINAR?</h2>
                 <p class="cta-subtitle">
-                    Junte-se às imobiliárias que já revolucionaram seus resultados 
-                    e estão liderando o mercado com tecnologia de ponta.
+                    Junte-se à elite das imobiliárias que já revolucionaram o mercado 
+                    com tecnologia suprema e resultados extraordinários.
                 </p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/5511999999999?text=Quero uma demonstração completa do G-PROP!" class="cta-button primary">
-                        DEMONSTRAÇÃO EXCLUSIVA
+                    <a href="https://wa.me/5511999999999?text=Quero uma demonstração SUPREMA do G-PROP!" class="cta-button primary">
+                        DEMONSTRAÇÃO SUPREMA
                     </a>
                     <a href="https://app.gprop.com.br" class="cta-button secondary">
-                        TESTAR GRATUITAMENTE
+                        ACESSO IMEDIATO
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Ultra -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>G-PROP</h3>
-                    <p>A plataforma de IA que está revolucionando a gestão imobiliária no Brasil. Tecnologia de ponta para resultados extraordinários.</p>
+                    <h3>G-PROP SUPREME</h3>
+                    <p>A plataforma de IA mais avançada do Brasil está revolucionando o mercado imobiliário. Tecnologia suprema para resultados extraordinários.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>PRODUTO</h3>
-                    <a href="#recursos">Recursos IA</a>
-                    <a href="#planos">Planos Premium</a>
-                    <a href="https://app.gprop.com.br">Acessar Plataforma</a>
+                    <h3>TECNOLOGIA</h3>
+                    <a href="#recursos">Arsenal IA</a>
+                    <a href="#planos">Planos Supremos</a>
+                    <a href="https://app.gprop.com.br">Plataforma Neural</a>
                 </div>
                 <div class="footer-section">
-                    <h3>SUPORTE</h3>
+                    <h3>SUPORTE ELITE</h3>
                     <a href="https://wa.me/5511999999999">WhatsApp Direto</a>
-                    <a href="mailto:suporte@gprop.com.br">Suporte Técnico</a>
-                    <a href="#">Central de Conhecimento</a>
+                    <a href="mailto:suporte@gprop.com.br">Suporte Supremo</a>
+                    <a href="#">Base de Conhecimento</a>
                 </div>
                 <div class="footer-section">
-                    <h3>EMPRESA</h3>
-                    <a href="#">Sobre a G-PROP</a>
-                    <a href="#">Cases de Sucesso</a>
-                    <a href="#">Parceiros</a>
+                    <h3>CORPORAÇÃO</h3>
+                    <a href="#">Sobre G-PROP</a>
+                    <a href="#">Cases Supremos</a>
+                    <a href="#">Parceiros Elite</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 G-PROP. Todos os direitos reservados. Tecnologia que transforma negócios.</p>
+                <p>&copy; 2025 G-PROP SUPREME. Todos os direitos reservados. Tecnologia que domina mercados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Buttons -->
+    <!-- Floating Buttons Ultra -->
     <div class="floating-buttons">
-        <a href="https://wa.me/5511999999999?text=Olá! Quero revolucionar minha imobiliária com G-PROP" class="floating-btn whatsapp-btn" title="WhatsApp">
+        <a href="https://wa.me/5511999999999?text=Quero revolucionar minha imobiliária com G-PROP SUPREME!" class="floating-btn whatsapp-btn" title="WhatsApp Supremo">
             💬
         </a>
-        <a href="#" class="floating-btn chat-btn" title="Chat Especialista" onclick="alert('Chat com especialista disponível em breve!')">
-            🎯
+        <a href="#" class="floating-btn chat-btn" title="Chat Neural" onclick="alert('Chat neural disponível em breve!')">
+            🧠
         </a>
     </div>
 
     <script>
-        // Hero slider functionality
-        let slideIndex = 1;
-        const slides = document.querySelectorAll('.slide');
-        const indicators = document.querySelectorAll('.indicator');
-        
-        function showSlide(n) {
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            
-            slides[slideIndex - 1].classList.add('active');
-            indicators[slideIndex - 1].classList.add('active');
-        }
-        
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
-        }
-        
-        function nextSlide() {
-            showSlide(slideIndex += 1);
-        }
-        
-        // Auto slide every 4 seconds
-        setInterval(nextSlide, 4000);
-        
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
@@ -1089,10 +1374,22 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.background = 'rgba(0, 0, 0, 0.98)';
             } else {
-                header.style.background = 'rgba(0, 0, 0, 0.9)';
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
             }
+        });
+
+        // Cyber effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add cyber glitch effect to title
+            const title = document.querySelector('.hero-title');
+            setInterval(() => {
+                title.style.textShadow = `
+                    0 0 50px rgba(191, 0, 255, ${Math.random() * 0.5 + 0.5}),
+                    0 0 100px rgba(191, 0, 255, ${Math.random() * 0.3 + 0.2})
+                `;
+            }, 2000);
         });
     </script>
 </body>
