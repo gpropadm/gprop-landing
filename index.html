@@ -661,12 +661,196 @@
                 grid-template-columns: 1fr;
             }
             
+            .slider-arrows {
+                display: none;
+            }
+            
+            .slide {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 30px;
+                gap: 40px;
+            }
+            
+            .slide-content {
+                max-width: 100%;
+            }
+            
+            .slide h3 {
+                font-size: 2rem;
+            }
+            
+            .slide-graphic {
+                width: 250px;
+                height: 150px;
+            }
+            
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
         }
         
+        /* Modern Slider */
+        .slider-section {
+            padding: 100px 0;
+            background: var(--gray-50);
+            overflow: hidden;
+        }
+        
+        .slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .slider-wrapper {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+            color: var(--white);
+            padding: 80px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+        
+        .slide-content {
+            flex: 1;
+            max-width: 500px;
+        }
+        
+        .slide-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .slide h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .slide p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .slide-cta {
+            background: var(--white);
+            color: var(--primary-red);
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .slide-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        }
+        
+        .slide-visual {
+            flex: 1;
+            position: relative;
+            text-align: center;
+        }
+        
+        .slide-graphic {
+            width: 300px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gray-300);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background: var(--primary-red);
+            transform: scale(1.2);
+        }
+        
+        .slider-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            pointer-events: none;
+            padding: 0 20px;
+        }
+        
+        .arrow-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            color: var(--primary-red);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .arrow-btn:hover {
+            background: var(--white);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
         /* Scroll Animations */
         .fade-in {
             opacity: 0;
@@ -730,6 +914,89 @@
                 
                 <div class="hero-visual">
                     <div class="hero-graphic"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Slider Section -->
+    <section class="slider-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Transforme Sua Imobiliária Hoje</h2>
+                <p>Descubra como nossa plataforma pode revolucionar seus resultados</p>
+            </div>
+            
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-track" id="sliderTrack">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="slide-badge">🚀 Aumento de Performance</div>
+                                <h3>300% Mais Vendas</h3>
+                                <p>
+                                    Nossas imobiliárias parceiras aumentaram suas vendas em média 
+                                    300% nos primeiros 6 meses usando nossa plataforma inteligente.
+                                </p>
+                                <a href="#planos" class="slide-cta">
+                                    Ver Planos 📈
+                                </a>
+                            </div>
+                            <div class="slide-visual">
+                                <div class="slide-graphic">📊</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="slide-badge">⚡ Automação Inteligente</div>
+                                <h3>Leads Qualificados</h3>
+                                <p>
+                                    Nossa IA qualifica automaticamente seus leads, direcionando 
+                                    apenas as oportunidades reais para sua equipe comercial.
+                                </p>
+                                <a href="https://wa.me/5511999999999?text=Quero saber sobre qualificação de leads!" class="slide-cta">
+                                    Falar com Especialista 🎯
+                                </a>
+                            </div>
+                            <div class="slide-visual">
+                                <div class="slide-graphic">🤖</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="slide-badge">💼 Gestão Completa</div>
+                                <h3>Contratos Digitais</h3>
+                                <p>
+                                    Digitalize todo seu processo contratual com assinatura eletrônica 
+                                    certificada e acompanhamento em tempo real.
+                                </p>
+                                <a href="https://app.gprop.com.br" class="slide-cta">
+                                    Testar Grátis 📋
+                                </a>
+                            </div>
+                            <div class="slide-visual">
+                                <div class="slide-graphic">📝</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <div class="slider-arrows">
+                        <button class="arrow-btn" id="prevBtn">‹</button>
+                        <button class="arrow-btn" id="nextBtn">›</button>
+                    </div>
+                </div>
+                
+                <!-- Navigation Dots -->
+                <div class="slider-nav">
+                    <div class="nav-dot active" data-slide="0"></div>
+                    <div class="nav-dot" data-slide="1"></div>
+                    <div class="nav-dot" data-slide="2"></div>
                 </div>
             </div>
         </div>
@@ -1000,6 +1267,78 @@
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
             }
+        });
+
+        // Modern Slider Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const sliderTrack = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const navDots = document.querySelectorAll('.nav-dot');
+
+        function updateSlider() {
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update nav dots
+            navDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Nav dot clicks
+        navDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+            });
+        });
+
+        // Auto-play slider
+        setInterval(nextSlide, 5000);
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        sliderTrack.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        sliderTrack.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            currentX = e.touches[0].clientX;
+        });
+
+        sliderTrack.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            
+            const deltaX = startX - currentX;
+            if (Math.abs(deltaX) > 50) {
+                if (deltaX > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+            isDragging = false;
         });
     </script>
 </body>
